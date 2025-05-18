@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.hero {
+  background: url('images/hotel3.png') no-repeat center center/cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hotel-info {
+  text-align: center;
+  padding: 30px;
+  background: white;
+}
+
+.hotel-info .stars {
+  font-size: 1.5em;
+  color: gold;
+}
+
+.gallery-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.more-photos {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.more-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.more-photos .overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+.gallery-section, .details-section, .booking-form-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.gallery-section h2,
+.details-section h2,
+.booking-form-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.details-section p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #555;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  color: #333;
+}
+
+.amenities li {
+  background-color: #eef;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.booking-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.booking-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.booking-form button {
+  background-color: #0071c2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.booking-form button:hover {
+  background-color: #005fa3;
+}
+
+.reviews {
+  background: #fff;
+  padding: 40px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-card {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card h3 {
+  margin: 0;
+  color: #333;
+}
+
+.review-card .stars {
+  color: gold;
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.review-card p {
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.location-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.location-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.location-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+
+.map-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2a8cff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.map-btn:hover {
+  background-color: #006be1;
+}
+
+
+.social-section {
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.social-section h3 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #444;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+  <div class="hero">
+    <div class="overlay">
+      <h1 data-aos="fade-down">Hotel Book Now</h1>
+    </div>
+  </div>
+
+  <section class="hotel-info">
+    <h1>Luxury Stay at Hotel Sunshine</h1>
+    <p class="stars">★★★★★</p>
+    <p class="description">
+      Hotel Sunshine offers premium accommodation with elegant rooms, rooftop dining, a serene spa, and more.
+    </p>
+    <p>No 84 Rajapihilla Mawatha, 20000 Kandy, Sri Lanka</p>
+  </section>
+
+  <section class="gallery-section" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/hotel1.png" alt="Room 1">
+      <img src="images/hotel2.png" alt="Room 2">
+      
+      <img src="images/hotel1.png" alt="Room 5">
+      <img src="images/hotel1.png" alt="Room 6">
+      <img src="images/hotel1.png" alt="Room 7">
+      <img src="images/hotel1.png" alt="Room 8">
+      
+      <!-- "+20 photos" image -->
+      <div class="more-photos">
+        <img src="images/hotel3.png" alt="More Rooms">
+        <div class="overlay">+20 photos</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-section" data-aos="fade-up">
+    <h2>About Hotel</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint culpa praesentium quia qui deleniti quis eligendi cupiditate, veritatis magnam illum, molestias numquam ut commodi? Ad minus ipsam commodi doloribus libero.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, consequuntur iusto, esse architecto officia natus tenetur laudantium harum necessitatibus odio vero commodi voluptas quod. Numquam quis quas possimus debitis magni.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla facere, corporis voluptate quaerat non sed error? Fuga earum aliquam ullam quisquam quae, veniam nobis. Quam eos veniam provident vitae debitis?
+    <br><br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi commodi repellendus, facere illum aliquid soluta quasi accusamus similique quis consequatur ducimus iste officiis a quo labore cupiditate quibusdam aut!
+
+    
+    
+    </p>
+    <ul class="amenities">
+      <li>🛏️ King Size Bed</li>
+      <li>📶 Free Wi-Fi</li>
+      <li>☕ Complimentary Breakfast</li>
+      <li>🧼 Room Service</li>
+      <li>🚗 Free Parking</li>
+      <li>🏊 Swimming Pool Access</li>
+      <li>🧘 On-site Spa & Wellness Center</li>
+      <li>🍽️ In-house Restaurant</li>
+      <li>🚕 Airport Shuttle (on request)</li>
+      <li>📺 Flat Screen TV with Cable</li>
+      <li>❄️ Air Conditioning</li>
+      <li>🔐 24/7 Security</li>
+    </ul>
+
+    <section class="social-section" data-aos="fade-up">
+      <h3>Connect with Us</h3>
+      <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+      </div>
+    </section>
+  </section>
+
+  
+  
+
+  <section class="booking-form-section" data-aos="fade-up">
+    <h2>Book Your Stay</h2>
+    <form class="booking-form">
+      <label>Name:</label>
+      <input type="text" required>
+
+      <label>Email:</label>
+      <input type="email" required>
+
+      <label>Check-in:</label>
+      <input type="date" required>
+
+      <label>Check-out:</label>
+      <input type="date" required>
+
+      <label>Guests:</label>
+      <input type="number" min="1" value="1" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <section class="reviews">
+    <h2>Guest Reviews</h2>
+    <div class="review-cards">
+      <div class="review-card">
+        <h3>Emily Johnson</h3>
+        <p class="stars">★★★★★</p>
+        <p>"The room was spotless and the staff were incredibly kind. Loved every bit of our stay!"</p>
+      </div>
+      <div class="review-card">
+        <h3>James Miller</h3>
+        <p class="stars">★★★★☆</p>
+        <p>"Beautiful rooftop restaurant and very comfy beds. I’ll definitely come back!"</p>
+      </div>
+      <div class="review-card">
+        <h3>Sophia Lee</h3>
+        <p class="stars">★★★★★</p>
+        <p>"Perfect location and wonderful breakfast. Highly recommended!"</p>
+      </div>
+      <div class="review-card">
+        <h3>Emily Johnson</h3>
+        <p class="stars">★★★★★</p>
+        <p>"The room was spotless and the staff were incredibly kind. Loved every bit of our stay!"</p>
+      </div>
+     
+    </div>
+  </section>
+
+  <section class="location-section" data-aos="fade-up">
+    <h2>Hotel Location</h2>
+    <p>No 84 Rajapihilla Mawatha, 20000 Kandy, Sri Lanka</p>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9185743776634!2d80.63761731532717!3d7.291419316842707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3665984c93c4d%3A0x8e3d5b04c6fc937d!2sKandy%20Hills!5e0!3m2!1sen!2slk!4v1616573779054!5m2!1sen!2slk" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  
+  
+
+  <footer class="footer-wrapper">
+    <div class="footer-cover">
+        <div class="email-information">
+            <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+        </div>
+        <div class="all-information-cover">
+            <div class="first-line-of-information-cover">
+                <div class="top-category">
+                    <h6>Top Category</h6>
+                    <div class="top-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Spa and facial</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li> 
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>
+                            </ul>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="trending-category">
+                    <h6>Trending Category</h6>
+                    <div class="trending-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Hospitals</a></li>
+                                <li><a href="#">Restuarants</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>                  
+                            </ul>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="help-support">
+                    <h6>Help & Support</h6>
+                    <div class="help-support-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                            </ul>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+            <div class="second-line-of-information-cover">
+                <div class="popular-tags">
+                    <h6>popular tags</h6>
+                    <div class="popular-tags-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact-details-cover">
+            <div class="contact-information1">
+                <h6>Get in touch</h6>
+                <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                <p>Phone: +01 5426 24400</p>
+                <p>Email: rn34@gmail.com</p>
+            </div>
+            <div class="download-information">
+                <h6>Download our free Mobile Apps</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                    </ul>
+            </div>           
+            <div class="social-media-details">
+                <h6>social media</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                    </ul>
+            </div>                                                           
+        </div>
+
+        <div class="countries">
+            <ul>
+                <li>Australia</li>
+                <li>UK</li>
+                <li>India</li>
+                <li>Germany</li>
+                <li>China</li>
+                <li>France</li>
+            </ul>
+            
+        </div>
+        <div class="footer-last">
+            <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+        </div>
+        
+    </div>
+</footer>  
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

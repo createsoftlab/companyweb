@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style-home-footer.css">
+    <link rel="stylesheet" href="style-services.css">
+    <link rel="stylesheet" href="style-contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    
+    
+    .services-hero {
+      position: relative;
+      height: 80vh;
+      background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(images/service-cover.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+      
+      
+     
+    }
+    
+    .services-hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    
+    .services-hero .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+    
+    .services-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .services-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+    
+    .search-bar input[type="text"] {
+      padding: 12px 20px;
+      flex: 1;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+    }
+    
+    .search-bar button {
+      background: #3498db;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    
+    .search-bar button:hover {
+      background: #2980b9;
+    }
+    /* 🔁 Responsive Adjustments */
+    @media (max-width: 768px) {
+      .services-hero h1 {
+        font-size: 2.2rem;
+      }
+    
+      .services-hero p {
+        font-size: 1rem;
+      }
+    
+      .search-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 10px;
+      }
+    
+      .search-bar input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+    
+      .search-bar button {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .services-hero h1 {
+        font-size: 1.8rem;
+      }
+    
+      .services-hero p {
+        font-size: 0.95rem;
+      }
+    }
+    
+    
+    
+    .services-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+    
+    .cards-container {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
+    /*
+    .service-card {
+      background: lightblue;
+      padding: 30px 20px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+    
+    .service-card:hover {
+      
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }*/
+    .service-card {
+  background: #e0f4ff; /* Softer light blue */
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+}
+
+/* ✅ Hover Animation */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+  background-color: #d0ecff; /* Slightly deeper blue on hover */
+}
+.service-card-link {
+  text-decoration: none;  /* Removes underline */
+       /* Keeps text colors as defined in .service-card */
+         /* Makes the entire card clickable */
+}
+
+
+    
+    .service-card .icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #005b99;
+    }
+    
+    .service-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .load-more-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .load-more-btn {
+      padding: 12px 30px;
+      background-color: #1b4d89;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .load-more-btn:hover {
+      background-color: #144072;
+    }
+    
+    /* 🔁 Responsive Enhancements */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+    
+      .service-card {
+        padding: 25px 15px;
+      }
+    
+      .service-card h3 {
+        font-size: 1.3rem;
+      }
+    
+      .service-card p {
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+    
+      .cards-container {
+        gap: 20px;
+      }
+    
+      .service-card {
+        padding: 20px 15px;
+      }
+    
+      .service-card .icon {
+        font-size: 35px;
+      }
+    
+      .service-card h3 {
+        font-size: 1.2rem;
+      }
+    
+      .service-card p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    
+    
+    .service-details-section {
+      padding: 60px 20px;
+      background-color: #eef2f5;
+      text-align: center;
+    }
+    
+    .details-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .details-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .details-card:hover {
+      transform: scale(1.02);
+    }
+    
+    .details-card img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .card-content {
+      padding: 20px;
+    }
+    
+    .card-content h3 {
+      margin-bottom: 15px;
+      color: #1b4d89;
+    }
+    
+    .card-content ul {
+      list-style: disc inside;
+      text-align: left;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    
+    .read-more-btn {
+      background-color: #1b4d89;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .read-more-btn:hover {
+      background-color: #144072;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card-content h3 {
+        font-size: 1.3rem;
+      }
+    
+      .card-content ul {
+        font-size: 0.95rem;
+      }
+    
+      .read-more-btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .service-details-section {
+        padding: 40px 15px;
+      }
+    
+      .card-content {
+        padding: 15px;
+      }
+    
+      .card-content h3 {
+        font-size: 1.2rem;
+      }
+    
+      .card-content ul {
+        font-size: 0.9rem;
+      }
+    
+      .read-more-btn {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+    }
+    
+    
+    
+    
+    .contact-banner {
+      background: url('images/service-cover.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    .contact-banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+      z-index: 0;
+    }
+    
+    .contact-banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+    }
+    
+    .contact-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    
+    .contact-banner p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    
+    .contact-banner-btn {
+      padding: 12px 30px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .contact-banner-btn:hover {
+      background-color: #2980b9;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .contact-banner {
+        padding: 80px 15px;
+      }
+    
+      .contact-banner h1 {
+        font-size: 2.2rem;
+      }
+    
+      .contact-banner p {
+        font-size: 1rem;
+      }
+    
+      .contact-banner-btn {
+        font-size: 0.95rem;
+        padding: 10px 24px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-banner {
+        padding: 60px 10px;
+      }
+    
+      .contact-banner h1 {
+        font-size: 1.8rem;
+      }
+    
+      .contact-banner p {
+        font-size: 0.95rem;
+      }
+    
+      .contact-banner-btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+      }
+    }
+    
+    
+    
+    
+    
+    
+      </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="services-hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Our Services</h1>
+    <p>
+      At Senzmedia, we help your brand grow with effective media and advertising solutions.<br />
+       get real business results, we're here to help.
+    </p>
+    <div class="search-bar">
+      <input type="text" placeholder="Search services..." id="searchInput" />
+      <button onclick="searchService()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="services-section">
+  <h2 class="section-title">Our Services</h2>
+  <div class="cards-container">
+    
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">📱</div>
+       <h3>Mobile Apps</h3>
+      <p>Build sleek and functional Android and iOS applications.</p>
+    </div>
+    </a>
+
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">📱</div>
+       <h3>Mobile Apps</h3>
+      <p>Build sleek and functional Android and iOS applications.</p>
+    </div>
+    </a>
+
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">📱</div>
+       <h3>Mobile Apps</h3>
+      <p>Build sleek and functional Android and iOS applications.</p>
+    </div>
+    </a>
+    
+   <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">📱</div>
+       <h3>Mobile Apps</h3>
+      <p>Build sleek and functional Android and iOS applications.</p>
+    </div>
+    </a>
+    
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">💻</div>
+       <h3>Web Development</h3>
+      <p>We create responsive and modern websites for all business needs.</p>
+    </div>
+    </a>
+
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">💻</div>
+       <h3>Web Development</h3>
+      <p>We create responsive and modern websites for all business needs.</p>
+    </div>
+    </a>
+
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">💻</div>
+       <h3>Web Development</h3>
+      <p>We create responsive and modern websites for all business needs.</p>
+    </div>
+    </a>
+
+    <a href="service-details.html" class="service-card-link">
+    <div class="service-card">
+       <div class="icon">💻</div>
+       <h3>Web Development</h3>
+      <p>We create responsive and modern websites for all business needs.</p>
+    </div>
+    </a>
+
+    
+  </div>
+</section>
+
+
+
+<section class="service-details-section">
+  <h2 class="section-title">Service Details</h2>
+  <div class="details-card-container">
+    <div class="details-card">
+      <img src="images/service1.jpg" alt="Web Development">
+      <div class="card-content">
+        <h3>Web Development</h3>
+        <ul>
+          <li>Responsive design</li>
+          <li>Modern frameworks (React, Vue)</li>
+          <li>SEO & performance optimization</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+        
+      </div>
+    </div>
+
+    <div class="details-card">
+      <img src="images/service2.jpg" alt="Mobile Development">
+      <div class="card-content">
+        <h3>Mobile App Development</h3>
+        <ul>
+          <li>Android & iOS platforms</li>
+          <li>Flutter, React Native</li>
+          <li>App Store deployment</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <img src="images/service3.jpg" alt="Cloud Services">
+      <div class="card-content">
+        <h3>Cloud Solutions</h3>
+        <ul>
+          <li>AWS / Azure deployment</li>
+          <li>Data backups & migration</li>
+          <li>Scalable architecture</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <img src="images/service4.jpg" alt="Cloud Services">
+      <div class="card-content">
+        <h3>Cloud Solutions</h3>
+        <ul>
+          <li>AWS / Azure deployment</li>
+          <li>Data backups & migration</li>
+          <li>Scalable architecture</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <img src="images/service5.jpg" alt="Web Development">
+      <div class="card-content">
+        <h3>Web Development</h3>
+        <ul>
+          <li>Responsive design</li>
+          <li>Modern frameworks (React, Vue)</li>
+          <li>SEO & performance optimization</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <img src="images/service6.jpg" alt="Web Development">
+      <div class="card-content">
+        <h3>Web Development</h3>
+        <ul>
+          <li>Responsive design</li>
+          <li>Modern frameworks (React, Vue)</li>
+          <li>SEO & performance optimization</li>
+        </ul>
+        <a href="service-details.html">
+          <button class="read-more-btn">Read More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="load-more-wrapper">
+    <button class="load-more-btn">Load More</button>
+  </div>
+  
+</section>
+<script>
+  document.querySelectorAll('.read-more-btn').forEach(btn => {
+btn.addEventListener('click', () => {
+  alert("More details coming soon...");
+  // You can open a modal or redirect here
+});
+});
+
+</script>
+
+
+
+
+
+
+<section class="contact-banner">
+<div class="contact-banner-content">
+  <h1>Contact Us</h1>
+  <p>We're here to help. Reach out to us with your questions or inquiries.</p>
+  <a href="contact.html" class="contact-banner-btn">Get in Touch</a>
+</div>
+</section>
+
+
+
+
+    
+    
+    <footer class="footer-wrapper">
+      <div class="footer-cover">
+          <div class="email-information">
+              <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+          </div>
+          <div class="all-information-cover">
+              <div class="first-line-of-information-cover">
+                  <div class="top-category">
+                      <h6>Top Category</h6>
+                      <div class="top-category-list">
+                          <div class="list">
+                              <ul>
+                                  <li><a href="#">Technology</a></li>
+                                  <li><a href="#">Spa and facial</a></li>
+                                  <li><a href="#">Real Estate</a></li>
+                                  <li><a href="#">Sports</a></li> 
+                                  <li><a href="#">Education</a></li>
+                                  <li><a href="#">Electricals</a></li>
+                                  <li><a href="#">Automobiles</a></li>
+                                  <li><a href="#">Transportation</a></li>
+                              </ul>
+                          </div>
+                      </div>                  
+                  </div>
+                  <div class="trending-category">
+                      <h6>Trending Category</h6>
+                      <div class="trending-category-list">
+                          <div class="list">
+                              <ul>
+                                  <li><a href="#">Hospitals</a></li>
+                                  <li><a href="#">Restuarants</a></li>
+                                  <li><a href="#">Real Estate</a></li>
+                                  <li><a href="#">Sports</a></li>
+                                  <li><a href="#">Education</a></li>
+                                  <li><a href="#">Electricals</a></li>
+                                  <li><a href="#">Automobiles</a></li>
+                                  <li><a href="#">Transportation</a></li>                  
+                              </ul>
+                          </div>
+                      </div>                   
+                  </div>
+                  <div class="help-support">
+                      <h6>Help & Support</h6>
+                      <div class="help-support-list">
+                          <div class="list">
+                              <ul>
+                                  <li><a href="#">About us</a></li>
+                                  <li><a href="#">FAQ</a></li>
+                                  <li><a href="#">Feedback</a></li>
+                                  <li><a href="#">Contact us</a></li>
+                                  <li><a href="#">Privacy Policy</a></li>
+                                  <li><a href="#">Terms of use</a></li>
+                              </ul>
+                          </div>
+                      </div>                        
+                  </div>
+              </div>
+              <div class="second-line-of-information-cover">
+                  <div class="popular-tags">
+                      <h6>popular tags</h6>
+                      <div class="popular-tags-list">
+                          <div class="list">
+                              <ul>
+                                  <li><a href="#">Schools in new york</a></li>
+                                  <li><a href="#">Real estate in Chennai</a></li>
+                                  <li><a href="#">Flat for rent in Melborn</a></li>
+                                  <li><a href="#">Real Estate in Illunious</a></li>
+                                  <li><a href="#">Enents in Thailand</a></li>
+                                  <li><a href="#">Schools in new york</a></li>
+                                  <li><a href="#">Schools in new york</a></li>
+                                  <li><a href="#">Real estate in Chennai</a></li>
+                                  <li><a href="#">Flat for rent in Melborn</a></li>
+                                  <li><a href="#">Real Estate in Illunious</a></li>
+                                  <li><a href="#">Enents in Thailand</a></li>
+                                  <li><a href="#">Schools in new york</a></li>
+                                  <li><a href="#">Schools in new york</a></li>
+                                  <li><a href="#">Real estate in Chennai</a></li>
+                                  <li><a href="#">Flat for rent in Melborn</a></li>
+                                  <li><a href="#">Real Estate in Illunious</a></li>
+                                  <li><a href="#">Enents in Thailand</a></li>
+                                  <li><a href="#">Schools in new york</a></li>
+                              </ul>
+                          </div>
+                      </div>    
+                  </div>
+              </div>
+              
+          </div>
+          <div class="contact-details-cover">
+              <div class="contact-information">
+                  <h6>Get in touch</h6>
+                  <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                  <p>Phone: +01 5426 24400</p>
+                  <p>Email: rn34@gmail.com</p>
+              </div>
+              <div class="download-information">
+                  <h6>Download our free Mobile Apps</h6>
+                      <ul>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                      </ul>
+              </div>           
+              <div class="social-media-details">
+                  <h6>social media</h6>
+                      <ul>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                          <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                      </ul>
+              </div>                                                           
+          </div>
+    
+          <div class="countries">
+              <ul>
+                  <li>Australia</li>
+                  <li>UK</li>
+                  <li>India</li>
+                  <li>Germany</li>
+                  <li>China</li>
+                  <li>France</li>
+              </ul>
+              
+          </div>
+          <div class="footer-last">
+              <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+          </div>
+          
+      </div>
+    </footer>
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <script>
+        function searchService() {
+      const input = document.getElementById("searchInput").value;
+      if (input.trim()) {
+        alert("Searching for: " + input);
+        // Implement actual search logic here
+      } else {
+        alert("Please enter a search term.");
+      }
+    }
+    
+      </script>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>

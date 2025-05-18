@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style-home-footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style-home.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+
+
+    
+.jobs-heading {
+    height: 80vh;
+    text-align: center;
+    color: #ffffff;
+    display: center;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    background-size: cover !important;
+    background-position: center;
+    padding-top:5rem ;
+    padding-bottom: 10rem;
+   
+    
+
+}
+
+.jobs-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+   
+}
+.jobs-bg h2{
+    font-size: 3rem;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 40px;
+   
+}
+
+
+.text{
+    font-size: 16px;
+
+    font-weight: 400;
+    opacity: 0.9;
+   
+}
+.jobs-bg .text{
+    margin: 1.2rem;
+    
+} 
+
+/* 🔹 Search Bar Container */
+.jobs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+/* 🔹 Search Wrapper */
+.jobs-wrapper {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 🔹 Dropdown Styles */
+.dropdown select {
+    padding: 10px;
+    border: 1px solid #00204a;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 200px;
+    font-weight: bold;
+    
+}
+
+/* 🔹 Search Input */
+.jobs-cover input {
+    padding: 10px;
+    width: 350px;
+    border: 1px solid #00204a;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 🔹 Search Button */
+.jobs-search-icon button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.jobs-search-icon button:hover {
+    background: #0056b3;
+}
+
+
+  /* Base responsive setup: ensures box-sizing works consistently */
+* {
+    box-sizing: border-box;
+}
+
+/* ============================================
+   📱 Tablets and Smaller Devices (≤ 1024px)
+============================================ */
+@media (max-width: 1024px) {
+    .jobs-heading {
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .jobs-bg h2 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .jobs-bg h3 {
+        font-size: 1.2rem;
+    }
+
+    .jobs-container {
+        padding: 15px;
+    }
+
+    .jobs-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .dropdown select,
+    .jobs-cover input,
+    .jobs-search-icon button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .jobs-search-icon button {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   📱 Mobile Devices (≤ 768px)
+============================================ */
+@media (max-width: 768px) {
+    .jobs-heading {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+
+    .jobs-bg h2 {
+        font-size: 2rem;
+    }
+
+    .jobs-bg h3 {
+        font-size: 1rem;
+    }
+
+    .jobs-container {
+        padding: 10px;
+    }
+
+    .jobs-wrapper {
+        gap: 12px;
+    }
+
+    .dropdown select,
+    .jobs-cover input,
+    .jobs-search-icon button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* ============================================
+   📱 Extra Small Devices (≤ 480px)
+============================================ */
+@media (max-width: 480px) {
+    .jobs-bg h2 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .jobs-bg h3 {
+        font-size: 0.9rem;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+
+    .jobs-wrapper {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .dropdown select,
+    .jobs-cover input,
+    .jobs-search-icon button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .jobs-search-icon button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+    .section-title {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 2rem;
+      color: #0056b3;
+      animation: fadeIn 2s ease;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    
+  .sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin: 6px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.sidebar ul li:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+
+.products {
+      flex: 2 1 600px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+      gap: 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    
+.card {
+  width: 350px;
+  height: 450px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card .category {
+  background-color: lightblue;
+  color: black;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.card h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  min-height: 40px; /* Fixed height */
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  min-height: 40px; /* Fixed height */
+}
+
+.card .price {
+  font-weight: bold;
+  color: #00204a;
+  font-size: 16px;
+  margin: 8px 0;
+  min-height: 20px; /* Fixed height */
+}
+
+.available {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 8px 0;
+  min-height: 20px; /* Fixed height */
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%; /* Full button */
+}
+
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .pagination span {
+      margin: 0 8px;
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    /* Responsive Product Grid */
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card h4,
+  .card p,
+  .card .price,
+  .available {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .card h4 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card button {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .pagination span {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .card h4 {
+    font-size: 15px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .card .price,
+  .available {
+    font-size: 13px;
+  }
+
+  .card button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .pagination {
+    margin: 20px 0;
+  }
+
+  .pagination span {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+
+    .details-section {
+      margin: 60px auto;
+      max-width: 1000px;
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .details-section p {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .sidebar {
+      flex: 1 1 200px;
+      background: #e0edff;
+      padding: 20px;
+      border-radius: 12px;
+      animation: slideInLeft 1s ease;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+
+
+.details-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00204a;
+}
+
+.details-section p {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* 🔹 Image Container Styling */
+.slider-products-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* 🔹 Individual Images */
+.slider-products-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.slider-products-img img:hover {
+    transform: scale(1.05);
+}
+
+ 
+
+ 
+
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes slideInLeft {
+      from {transform: translateX(-50px); opacity: 0;}
+      to {transform: translateX(0); opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    /* Banner Slider*/ 
+.banner-slider-products{
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+
+.slides-products {
+  display: flex;
+  width: 300%;
+  animation: slide 9s infinite;
+}
+
+.slides-products img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-slider-products {
+    height: 40vh;
+    max-height: 300px;
+  }
+  
+  .slides-products img {
+    height: 40vh;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-slider-products {
+    height: 30vh;
+    max-height: 250px;
+  }
+  
+  .slides-products img {
+    height: 30vh;
+    max-height: 250px;
+  }
+}
+
+
+
+/* Offer Section */
+.offer-section {
+  padding: 60px 20px;
+  background-color: #111;
+  background-image: url('company web/images/a3.jpeg'); /* optional background */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Container Flex */
+.offer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Image Section */
+.image-area {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  animation: fadeInLeft 1.5s ease;
+}
+
+.shirt-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.shirt-img:hover {
+  transform: scale(1.05);
+}
+
+.discount-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 16px;
+  animation: popIn 1.2s ease-in-out;
+}
+
+/* Text Area */
+.text-area {
+  max-width: 400px;
+  animation: fadeInRight 1.5s ease;
+}
+
+.text-area h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: blue;
+}
+
+.text-area p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  padding: 12px 30px;
+  background-color: transparent;
+  border: 2px solid blue;
+  color: blue;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  animation: bounceBtn 2s infinite;
+}
+
+.shop-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounceBtn {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+
+
+
+
+.offer-section {
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.offer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.image-area {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin-right: 30px;
+}
+
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 3px;
+}
+
+.next {
+  right: 3px;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .offer-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .image-area {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .text-area {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .text-area h1 {
+    font-size: 28px;
+  }
+
+  .text-area p {
+    font-size: 15px;
+  }
+
+  .shop-btn {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">Jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+<section class="jobs-section">
+  <div class="jobs-heading" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url(images/company-cover.jpg ) no-repeat;">
+      <div class="jobs-bg">
+          
+          <h2> Our Products</h2>
+          <h3>Apply and Join with us</h3>
+          
+          
+      </div>
+
+     
+
+
+      <section class="jobs-container">
+          <div class="jobs-wrapper">
+              
+             
+  
+              <!-- 🔹 Dropdown: Job Location -->
+              <div class="dropdown">
+                  <select id="job-location">
+                      <option value="" disabled selected>Choose products</option>
+                      <option value="Colombo">shoes</option>
+                      <option value="Kandy">shoes</option>
+                      <option value="Galle">shoes</option>
+                      <option value="Jaffna">shoes</option>
+                      <option value="Kurunegala">shoes</option>
+                  </select>
+              </div>
+              <!-- 🔹 Search Input -->
+              <div class="jobs-cover">
+                  <input type="search" id="search-input" placeholder="Search products here...">
+              </div>
+  
+              <!-- 🔹 Search Button -->
+              <div class="jobs-search-icon">
+                  <button class="search-btn" id="search-btn">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+              </div>
+  
+              
+          </div>
+      </section>
+  
+  </div>
+</section>
+
+
+<h2 class="section-title">Choose Your Product Category</h2>
+<div class="container">
+<div class="sidebar">
+<h3>Categories</h3>
+<ul>
+<li onclick="filterProducts('all')">All</li>
+<li onclick="filterProducts('Shoes')">Shoes</li>
+<li onclick="filterProducts('Apparel')">Apparel</li>
+<li onclick="filterProducts('Gadgets')">Gadgets</li>
+<li onclick="filterProducts('Home Decor')">Home Decor</li>
+<li onclick="filterProducts('Home Decor')">Home Decor</li>
+<li onclick="filterProducts('Accessories')">Accessories</li>
+</ul>
+</div>
+
+<div class="products">
+<!-- Example Product Cards with categories --------------------------------------->
+<div class="card" data-category="Shoes">
+<img src="images/picture2.jpg" alt="product">
+<div class="category">Shoes</div>
+<h4>Running Shoes</h4>
+<p>High quality and lightweight running shoes.</p>
+<div class="price">Rs 89.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+
+</div>
+
+<div class="card" data-category="Shoes">
+<img src="images/picture2.jpg" alt="product">
+<div class="category">Shoes</div>
+<h4>Running Shoes</h4>
+<p>High quality and lightweight running shoes.</p>
+<div class="price">Rs 89.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Shoes">
+<img src="images/picture2.jpg" alt="product">
+<div class="category">Shoes</div>
+<h4>Running Shoes</h4>
+<p>High quality and lightweight running shoes.</p>
+<div class="price">Rs 89.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Shoes">
+<img src="images/picture2.jpg" alt="product">
+<div class="category">Shoes</div>
+<h4>Running Shoes</h4>
+<p>High quality and lightweight running shoes.</p>
+<div class="price">Rs 89.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+<!------------------------------------------------------------------------------------------->
+
+
+<div class="card" data-category="Apparel">
+<img src="images/picture1.jpeg" alt="product">
+<div class="category">Apparel</div>
+<h4>Sports T-Shirt</h4>
+<p>Comfortable and stylish sports t-shirt.</p>
+<div class="price">Rs 29.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Apparel">
+<img src="images/picture1.jpeg" alt="product">
+<div class="category">Apparel</div>
+<h4>Sports T-Shirt</h4>
+<p>Comfortable and stylish sports t-shirt.</p>
+<div class="price">Rs 29.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Apparel">
+<img src="images/picture1.jpeg" alt="product">
+<div class="category">Apparel</div>
+<h4>Sports T-Shirt</h4>
+<p>Comfortable and stylish sports t-shirt.</p>
+<div class="price">Rs 29.99</div>
+<div class="available">Available</div>
+<button>View more</button>
+</div>
+
+
+<!------------------------------------------------------------------------------------------------>
+
+<div class="card" data-category="Gadgets">
+<img src="images/picture3.jpeg" alt="product">
+<div class="category">Gadgets</div>
+<h4>Bluetooth Speaker</h4>
+<p>Portable Bluetooth speaker with great sound.</p>
+<div class="price">Rs 49.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Gadgets">
+<img src="images/picture3.jpeg" alt="product">
+<div class="category">Gadgets</div>
+<h4>Bluetooth Speaker</h4>
+<p>Portable Bluetooth speaker with great sound.</p>
+<div class="price">Rs 49.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<div class="card" data-category="Gadgets">
+<img src="images/picture3.jpeg" alt="product">
+<div class="category">Gadgets</div>
+<h4>Bluetooth Speaker</h4>
+<p>Portable Bluetooth speaker with great sound.</p>
+<div class="price">Rs 49.99</div>
+<div class="available">Available</div>
+<a href="products-details.html">
+  <button>View more</button>
+</a>
+</div>
+
+<!-- More product cards with different categories -->
+</div>
+</div>
+
+<div class="pagination">
+<span>&laquo;</span> <!-- Left arrow -->
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>&raquo;</span> <!-- Right arrow -->
+</div>
+
+
+
+
+<!----
+<section class="offer-section">
+<div class="offer-container">
+<div class="image-area">
+<img src="images/picture1.jpeg" alt="Shirts" class="shirt-img" />
+<div class="discount-badge">50% OFF</div>
+</div>
+<div class="text-area">
+<h1>Special <span class="highlight">Offer</span> Just for You!</h1>
+<p>Grab your favorite product at an exclusive discounted price. Limited time only!</p>
+<button class="shop-btn" onclick="shopNow()">Click Now</button>
+</div>
+</div>
+<div class="offer-container">
+<div class="image-area">
+<img src="images/picture1.jpeg" alt="Shirts" class="shirt-img" />
+<div class="discount-badge">50% OFF</div>
+</div>
+<div class="text-area">
+<h1>Special <span class="highlight">Offer</span> Just for You!</h1>
+<p>Grab your favorite product at an exclusive discounted price. Limited time only!</p>
+<button class="shop-btn" onclick="shopNow()">Click Now</button>
+</div>
+</div>
+</section>--->
+<section class="offer-section">
+<div class="slider-wrapper">
+<div class="slider" id="offerSlider">
+<!-- Slide 1 -->
+<div class="offer-container">
+  <div class="image-area">
+    <img src="images/picture1.jpeg" alt="Shirts" class="shirt-img" />
+    <div class="discount-badge">50% OFF</div>
+  </div>
+  <div class="text-area">
+    <h1>Special <span class="highlight">Offer</span> Just for You!</h1>
+    <p>Grab your favorite product at an exclusive discounted price. Limited time only!</p>
+    <button class="shop-btn" onclick="shopNow()">Click Now</button>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="offer-container">
+  <div class="image-area">
+    <img src="images/picture2.jpg" alt="Shirts" class="shirt-img" />
+    <div class="discount-badge">50% OFF</div>
+  </div>
+  <div class="text-area">
+    <h1>Special <span class="highlight">Offer</span> Just for You!</h1>
+    <p>Grab your favorite product at an exclusive discounted price. Limited time only!</p>
+    <button class="shop-btn" onclick="shopNow()">Click Now</button>
+  </div>
+</div>
+</div>
+
+<!-- Navigation Buttons -->
+<button class="nav-btn prev" onclick="prevSlide()">❮</button>
+<button class="nav-btn next" onclick="nextSlide()">❯</button>
+</div>
+</section>
+<script>
+let currentIndexs = 0;
+
+function updateSlider() {
+const slider = document.getElementById("offerSlider");
+const slideWidth = slider.children[0].offsetWidth;
+slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+function nextSlide() {
+const slider = document.getElementById("offerSlider");
+const slides = slider.children.length;
+currentIndex = (currentIndex + 1) % slides;
+updateSlider();
+}
+
+function prevSlide() {
+const slider = document.getElementById("offerSlider");
+const slides = slider.children.length;
+currentIndex = (currentIndex - 1 + slides) % slides;
+updateSlider();
+}
+
+function shopNow() {
+alert("Redirecting to shop...");
+// Optionally use: window.location.href = "/shop";
+}
+
+// Optional: Auto Slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
+
+
+
+
+
+
+
+
+
+<div class="details-section">
+<h2>Why Choose Us?</h2>
+<p>We provide premium quality products with best-in-class customer support and fast delivery options. Explore our diverse catalog that suits your needs and budget.</p>
+<div class="slider-products-img">
+<img src="images/a1.jpeg" alt="img1">
+<img src="images/a2.jpeg" alt="img2">
+<img src="images/a3.jpeg" alt="img3">
+<img src="images/a2.jpeg" alt="img4">
+</div>
+</div>
+
+<!--Banner Slider Section -->
+<section class="banner-slider-products">
+<div class="slides-products">
+<img src="images/istockphoto3.jpg" alt="Banner 1">
+<img src="images/istockphoto.jpg" alt="Banner 2">
+<img src="images/istockphoto2.jpg" alt="Banner 3">
+</div>
+</section>
+
+
+
+
+ <footer class="footer-wrapper">
+    <div class="footer-cover">
+        <div class="email-information">
+            <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+        </div>
+        <div class="all-information-cover">
+            <div class="first-line-of-information-cover">
+                <div class="top-category">
+                    <h6>Top Category</h6>
+                    <div class="top-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Spa and facial</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li> 
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>
+                            </ul>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="trending-category">
+                    <h6>Trending Category</h6>
+                    <div class="trending-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Hospitals</a></li>
+                                <li><a href="#">Restuarants</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>                  
+                            </ul>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="help-support">
+                    <h6>Help & Support</h6>
+                    <div class="help-support-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                            </ul>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+            <div class="second-line-of-information-cover">
+                <div class="popular-tags">
+                    <h6>popular tags</h6>
+                    <div class="popular-tags-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact-details-cover">
+            <div class="contact-information">
+                <h6>Get in touch</h6>
+                <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                <p>Phone: +01 5426 24400</p>
+                <p>Email: rn34@gmail.com</p>
+            </div>
+            <div class="download-information">
+                <h6>Download our free Mobile Apps</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                    </ul>
+            </div>           
+            <div class="social-media-details">
+                <h6>social media</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                    </ul>
+            </div>                                                           
+        </div>
+
+        <div class="countries">
+            <ul>
+                <li>Australia</li>
+                <li>UK</li>
+                <li>India</li>
+                <li>Germany</li>
+                <li>China</li>
+                <li>France</li>
+            </ul>
+            
+        </div>
+        <div class="footer-last">
+            <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+        </div>
+        
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+const productsPerPage = 9;
+const cards = document.querySelectorAll('.card');
+const pagination = document.querySelectorAll('.pagination span');
+
+// Function to show the selected page
+function showPage(pageNumber) {
+  const start = (pageNumber - 1) * productsPerPage;
+  const end = start + productsPerPage;
+
+  cards.forEach((card, index) => {
+    if (index >= start && index < end) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Update active page styling
+  pagination.forEach(span => span.classList.remove('active'));
+  pagination[pageNumber - 1].classList.add('active');
+}
+
+// Add click event to each pagination button
+pagination.forEach((span, index) => {
+  span.addEventListener('click', () => {
+    showPage(index + 1);
+  });
+});
+
+// Show first page by default
+showPage(1);
+
+
+
+
+// JavaScript to filter products based on category selection
+function filterProducts(category) {
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach(card => {
+    // Show all products if 'All' is selected
+    if (category === 'all' || card.getAttribute('data-category') === category) {
+      card.style.display = 'block';  // Show the product card
+    } else {
+      card.style.display = 'none';  // Hide the product card
+    }
+  });
+}
+
+
+
+
+
+
+
+
+const slidesContainer = document.querySelector('.slides');
+const slides = document.querySelectorAll('.slides img');
+
+let currentIndex = 0;
+const totalSlides = slides.length;
+const slideWidth = slides[0].clientWidth;
+
+// Function to move to next slide
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= totalSlides) {
+    currentIndex = 0;
+  }
+  updateSlidePosition();
+}
+
+// Update the slide position
+function updateSlidePosition() {
+  slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Auto move every 3 seconds
+setInterval(nextSlide, 3000);
+
+
+
+
+
+
+
+
+// Function to search and filter products based on search input and category selection
+function searchProducts() {
+  const searchText = document.querySelector('.search-bar input').value.toLowerCase();
+  const selectedCategory = document.querySelector('.search-bar select').value;
+
+  // Get all product cards
+  const productCards = document.querySelectorAll('.products .card');
+
+  productCards.forEach(card => {
+    // Get the title of the product (h4) and its category (data-category attribute)
+    const cardTitle = card.querySelector('h4').innerText.toLowerCase();
+    const cardCategory = card.getAttribute('data-category').toLowerCase();
+
+    // Check if the card title contains the search text
+    const matchesSearch = cardTitle.includes(searchText);
+
+    // Check if the category matches the selected category or 'all'
+    const matchesCategory = selectedCategory === '' || selectedCategory === 'all' || selectedCategory.toLowerCase() === cardCategory;
+
+    // Show or hide the card based on search and category conditions
+    if (matchesSearch && matchesCategory) {
+      card.style.display = 'block'; // Show the product
+    } else {
+      card.style.display = 'none'; // Hide the product
+    }
+  });
+}
+
+// Function to filter products by category when sidebar category is clicked
+function filterProducts(category) {
+  // Get all product cards
+  const productCards = document.querySelectorAll('.products .card');
+
+  productCards.forEach(card => {
+    // Get the category of the card
+    const cardCategory = card.getAttribute('data-category').toLowerCase();
+
+    // If category matches or is 'all', show the card, otherwise hide it
+    if (category === 'all' || category.toLowerCase() === cardCategory) {
+      card.style.display = 'block'; // Show the product
+    } else {
+      card.style.display = 'none'; // Hide the product
+    }
+  });
+}
+
+
+  
+function shopNow() {
+  alert("Redirecting to the shop page...");
+  // Replace with real URL:
+  // window.location.href = "https://yourshop.com";
+}
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

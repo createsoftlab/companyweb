@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Villa Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-home.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-home-footer.css">
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .booking-hero {
+      
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+       url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85') no-repeat center center / cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5%;
+      position: relative;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .guest-selector {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+.guest-display {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+
+
+
+.guest-box {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 5;
+  width: 100%;
+  
+}
+.guest-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.guest-control button {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.guest-control span {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+.guest-control.switch label {
+  flex: 1;
+}
+.guest-control.switch input[type="checkbox"] {
+  transform: scale(1.2);
+}
+.guest-control label {
+  color: black;
+  font-weight: bold;
+}
+.guest-control span {
+  color: black;
+  font-weight: bold;
+}
+#guestSummary {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+    .search-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 2000px;
+      margin-top: 20px;
+    }
+    .search-box input, .search-box select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 180px;
+    }
+    .search-box button {
+      background-color: #0071c2;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .search-box button:hover {
+      background-color: #005a99;
+    }
+
+
+
+
+
+    .villa-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.villa-section h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.villa-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+
+.villa-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.villa-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.villa-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.villa-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.date-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.villa-info {
+  padding: 16px;
+}
+
+.villa-info h4 {
+  font-size: 14px;
+  color: #555;
+}
+
+.villa-info h3 {
+  font-size: 18px;
+  margin: 6px 0 10px;
+}
+
+.villa-info p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.icons span {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.price-deal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price small {
+  font-size: 12px;
+  color: #888;
+}
+
+.deal-btn {
+  padding: 8px 16px;
+  border: none;
+  background: linear-gradient(90deg, #005a99,#0071c2);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rating-villa {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+.see-more-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.see-more-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.gallery-villa {
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+
+.gallery-villa .heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-villa .heading h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.gallery-villa .heading p {
+  font-size: 16px;
+  color: #666;
+}
+
+.gallery-villa .content {
+  position: relative;
+}
+
+.owl-carousel .items {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.owl-carousel .items:hover {
+  transform: scale(1.02);
+}
+
+.owl-carousel .img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.items:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.overlay h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+<div class="booking-hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Search Our Villas</h1>
+    <p>Enter your dates to see the best prices and deals for villas</p>
+    <div class="search-box">
+      <input type="text" placeholder="Destination" id="destination" value="Vilas" />
+      <input type="date" id="checkin" />
+      <input type="date" id="checkout" />
+      <div class="guest-selector">
+        <div class="guest-display" onclick="toggleGuestBox()">
+          👤 <span id="guestSummary">2 adults · 0 children · 1 room</span>
+        </div>
+        <div class="guest-box" id="guestBox">
+          <div class="guest-control">
+            <label>Adults</label>
+            <button onclick="updateGuests('adults', -1)">−</button>
+            <span id="adultsCount">2</span>
+            <button onclick="updateGuests('adults', 1)">+</button>
+          </div>
+          <div class="guest-control">
+            <label>Children</label>
+            <button onclick="updateGuests('children', -1)">−</button>
+            <span id="childrenCount">0</span>
+            <button onclick="updateGuests('children', 1)">+</button>
+          </div>
+          <div class="guest-control">
+            <label>Rooms</label>
+            <button onclick="updateGuests('rooms', -1)">−</button>
+            <span id="roomsCount">1</span>
+            <button onclick="updateGuests('rooms', 1)">+</button>
+          </div>
+          
+        </div>
+      </div>
+      
+      <button onclick="searchVilla()">Search</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section class="villa-section">
+  <h2>Book Now Our Villas</h2>
+  <p>Villa rentals in Sri Lanka: find your perfect rental from just $19 per night!</p>
+
+  <div class="villa-cards">
+
+    <!-- Card 1 -->
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 1.jpg');">
+        <span class="date-tag">May 10 - May 17</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 6 guests • 4 bedrooms</h4>
+        <h3>Villa with yard & private pool | Nature view</h3>
+        <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+        
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>🚭</span>
+          <span>👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$97 <small>per night</small></span>
+          <button class="deal-btn">Book Now </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/picture1.jpeg');">
+        <span class="date-tag">May 10 - May 17</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 6 guests • 4 bedrooms</h4>
+        <h3>Villa with yard & private pool | Nature view</h3>
+        <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>🚭</span>
+          <span>👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$97 <small>per night</small></span>
+          <button class="deal-btn">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 2.jpg');">
+        <span class="date-tag">May 31 - Jun 7</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 16 guests • 5 bedrooms</h4>
+        <h3>Children-friendly villa with private pool, garden & grill</h3>
+        <p><i class="location-icon"></i> Kalutara, Western Province, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>📺</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$114 <small>per night</small></span>
+          <button class="deal-btn">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 2.jpg');">
+        <span class="date-tag">May 31 - Jun 7</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 16 guests • 5 bedrooms</h4>
+        <h3>Children-friendly villa with private pool, garden & grill</h3>
+        <p><i class="location-icon"></i> Kalutara, Western Province, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>📺</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$114 <small>per night</small></span>
+          <button class="deal-btn">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 1.jpg');">
+        <span class="date-tag">May 10 - May 17</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 6 guests • 4 bedrooms</h4>
+        <h3>Villa with yard & private pool | Nature view</h3>
+        <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>🚭</span>
+          <span>👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$97 <small>per night</small></span>
+          <button class="deal-btn">Book Now </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 1.jpg');">
+        <span class="date-tag">May 10 - May 17</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 6 guests • 4 bedrooms</h4>
+        <h3>Villa with yard & private pool | Nature view</h3>
+        <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>🚭</span>
+          <span>👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$97 <small>per night</small></span>
+          <button class="deal-btn">Book Now </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-card">
+      <div class="villa-image" style="background-image: url('images/villa\ 2.jpg');">
+        <span class="date-tag">May 10 - May 17</span>
+      </div>
+      <div class="villa-info">
+        <h4>Villa • 6 guests • 4 bedrooms</h4>
+        <h3>Villa with yard & private pool | Nature view</h3>
+        <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+        <div class="icons">
+          <span>🌐</span>
+          <span>📶</span>
+          <span>🌬️</span>
+          <span>🚭</span>
+          <span>👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+        <div class="price-deal">
+          <span class="price">$97 <small>per night</small></span>
+          <button class="deal-btn">Book Now </button>
+        </div>
+      </div>
+      </div>
+
+      <div class="villa-card">
+        <div class="villa-image" style="background-image: url('images/picture2.jpg');">
+          <span class="date-tag">May 10 - May 17</span>
+        </div>
+        <div class="villa-info">
+          <h4>Villa • 6 guests • 4 bedrooms</h4>
+          <h3>Villa with yard & private pool | Nature view</h3>
+          <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+          <div class="icons">
+            <span>🌐</span>
+            <span>📶</span>
+            <span>🌬️</span>
+            <span>🚭</span>
+            <span>👨‍👩‍👧‍👦</span>
+          </div>
+          <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+          <div class="price-deal">
+            <span class="price">$97 <small>per night</small></span>
+            <button class="deal-btn">Book Now </button>
+          </div>
+        </div>
+        </div>
+
+        <div class="villa-card">
+          <div class="villa-image" style="background-image: url('images/villa\ 2.jpg');">
+            <span class="date-tag">May 10 - May 17</span>
+          </div>
+          <div class="villa-info">
+            <h4>Villa • 6 guests • 4 bedrooms</h4>
+            <h3>Villa with yard & private pool | Nature view</h3>
+            <p><i class="location-icon"></i> Pahalagama, Hambantota, Sri Lanka</p>
+            <div class="icons">
+              <span>🌐</span>
+              <span>📶</span>
+              <span>🌬️</span>
+              <span>🚭</span>
+              <span>👨‍👩‍👧‍👦</span>
+            </div>
+            <div class="rating-villa">⭐ 3.8 <span>(2 ratings)</span></div>
+            <div class="price-deal">
+              <span class="price">$97 <small>per night</small></span>
+              <button class="deal-btn">Book Now </button>
+            </div>
+          </div>
+          </div>
+
+  </div>
+  <div class="see-more-container">
+    <button class="see-more-btn">See More</button>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.villa-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+      card.style.boxShadow = '0 8px 16px rgba(0,0,0,0.15)';
+    });
+    card.addEventListener('mouseout', () => {
+      card.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+    });
+  });
+
+  
+
+</script>
+
+
+
+
+
+<section class="gallery-villa">
+  <div class="container top">
+    <div class="heading">
+      
+      <h2>Our Gallery</h2>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    </div>
+  </div>
+
+  <div class="content mtop">
+    <div class="owl-carousel owl-carousel1 owl-theme">
+      <div class="items">
+        <div class="img">
+          <img src="images/villa 1.jpg" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-6.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-3.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-4.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-5.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-6.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-4.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-3.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-1.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+      <div class="items">
+        <div class="img">
+          <img src="images/gallery-6.png" alt="">
+        </div>
+        <div class="overlay">
+          <span class="fa fa-plus"> </span>
+          <h3>Book Now</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--footer-->
+
+<footer class="footer-wrapper">
+  <div class="footer-cover">
+      <div class="email-information">
+          <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+      </div>
+      <div class="all-information-cover">
+          <div class="first-line-of-information-cover">
+              <div class="top-category">
+                  <h6>Top Category</h6>
+                  <div class="top-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Technology</a></li>
+                              <li><a href="#">Spa and facial</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li> 
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>
+                          </ul>
+                      </div>
+                  </div>                  
+              </div>
+              <div class="trending-category">
+                  <h6>Trending Category</h6>
+                  <div class="trending-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Hospitals</a></li>
+                              <li><a href="#">Restuarants</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li>
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>                  
+                          </ul>
+                      </div>
+                  </div>                   
+              </div>
+              <div class="help-support">
+                  <h6>Help & Support</h6>
+                  <div class="help-support-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Feedback</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                              <li><a href="#">Terms of use</a></li>
+                          </ul>
+                      </div>
+                  </div>                        
+              </div>
+          </div>
+          <div class="second-line-of-information-cover">
+              <div class="popular-tags">
+                  <h6>popular tags</h6>
+                  <div class="popular-tags-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                          </ul>
+                      </div>
+                  </div>    
+              </div>
+          </div>
+          
+      </div>
+      <div class="contact-details-cover">
+          <div class="contact-information">
+              <h6>Get in touch</h6>
+              <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+              <p>Phone: +01 5426 24400</p>
+              <p>Email: rn34@gmail.com</p>
+          </div>
+          <div class="download-information">
+              <h6>Download our free Mobile Apps</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                  </ul>
+          </div>           
+          <div class="social-media-details">
+              <h6>social media</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                  </ul>
+          </div>                                                           
+      </div>
+
+      <div class="countries">
+          <ul>
+              <li>Australia</li>
+              <li>UK</li>
+              <li>India</li>
+              <li>Germany</li>
+              <li>China</li>
+              <li>France</li>
+          </ul>
+          
+      </div>
+      <div class="footer-last">
+          <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+      </div>
+      
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery and Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel1").owlCarousel({
+      items: 3,
+      margin: 20,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 3 }
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function searchVilla() {
+    const dest = document.getElementById("destination").value;
+    const checkin = document.getElementById("checkin").value;
+    const checkout = document.getElementById("checkout").value;
+    const guests = document.getElementById("guests").value;
+
+    if (!checkin || !checkout) {
+      alert("Please select check-in and check-out dates.");
+      return;
+    }
+
+    alert(`Searching villas in ${dest} from ${checkin} to ${checkout} for ${guests}.`);
+    // You can redirect or call an API here
+  }
+
+  let adults = 2, children = 0, rooms = 1;
+
+function toggleGuestBox() {
+  const box = document.getElementById("guestBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function updateGuests(type, delta) {
+  if (type === "adults") {
+    adults = Math.max(1, adults + delta);
+    document.getElementById("adultsCount").textContent = adults;
+  } else if (type === "children") {
+    children = Math.max(0, children + delta);
+    document.getElementById("childrenCount").textContent = children;
+  } else if (type === "rooms") {
+    rooms = Math.max(1, rooms + delta);
+    document.getElementById("roomsCount").textContent = rooms;
+  }
+  updateGuestSummary();
+}
+
+function updateGuestSummary() {
+  const summary = `${adults} adults · ${children} children · ${rooms} room${rooms > 1 ? 's' : ''}`;
+  document.getElementById("guestSummary").textContent = summary;
+}
+
+function searchVilla() {
+  const dest = document.getElementById("destination").value;
+  const checkin = document.getElementById("checkin").value;
+  const checkout = document.getElementById("checkout").value;
+  const pets = document.getElementById("petsToggle").checked ? "Yes" : "No";
+
+  if (!checkin || !checkout) {
+    alert("Please select check-in and check-out dates.");
+    return;
+  }
+
+  alert(`Searching villas in ${dest} from ${checkin} to ${checkout} for ${adults} adults, ${children} children, ${rooms} room(s). Pets: ${pets}`);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .swiper-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .availability-form {
+            margin-top: -50px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-primary {
+            background-color: #0071c2;
+            border-color: #0071c2;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #005999;
+            border-color: #005999;
+        }
+
+        .filter-sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .filter-group {
+            border-bottom: 1px solid #eee;
+            padding: 15px 10px;
+            margin-bottom: 0;
+        }
+
+        .filter-group h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .form-check {
+            margin-bottom: 8px;
+        }
+
+        .form-check-label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .price-range {
+            padding: 0 5px 15px;
+        }
+
+        #priceValue {
+            font-weight: 500;
+            color: #0071c2;
+        }
+
+        .filter-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .filter-sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .filter-sidebar::-webkit-scrollbar-thumb {
+            background: #0071c2;
+            border-radius: 10px;
+        }
+
+        .filter-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #005999;
+        }
+
+        .apartment-section {
+            padding: 0 0 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .apartment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .apartment-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .apartment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .apartment-image {
+            position: relative;
+            height: 250px;
+        }
+
+        .apartment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #0071c2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .apartment-info {
+            padding: 20px;
+        }
+
+        .apartment-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .location {
+            color: #666;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .location i {
+            margin-right: 8px;
+        }
+
+        .features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #555;
+            flex-wrap: wrap;
+        }
+
+        .features i {
+            margin-right: 5px;
+        }
+
+        .price-book {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0071c2;
+        }
+
+        .price small {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .book-btn {
+            background: #0071c2;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background: #005999;
+        }
+
+        .see-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .see-more-btn {
+            background: #0071c2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .see-more-btn:hover {
+            background: #005999;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .amenities-section {
+            padding: 60px 0;
+            background: #f0f4f8;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .amenity-item {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .amenity-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .amenity-item i {
+            font-size: 2.5rem;
+            color: #0071c2;
+            margin-bottom: 15px;
+        }
+
+        .amenity-item p {
+            font-weight: 500;
+            color: #333;
+        }
+
+        @media (max-width: 1200px) {
+            .apartment-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .filter-sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: 30px;
+            }
+
+            .apartment-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .swiper-container {
+                height: 100%;
+            }
+
+            .availability-form .row>div {
+                margin-bottom: 15px;
+            }
+
+            .apartment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .availability-form {
+            margin-top: -50px;
+            z-index: 2;
+            position: relative;
+        }
+        }
+
+         @media (max-width: 767.98px) {
+        .availability-form {
+            width: 80%;
+        }
+        
+        .availability-form .form-control,
+        .availability-form .form-select {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        
+        .availability-form .form-control:focus,
+        .availability-form .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        
+        .availability-form .btn-primary {
+            padding: 10px;
+            font-weight: 500;
+            border-radius: 8px;
+        }
+        
+        .availability-form .row > div {
+            margin-bottom: 15px;
+        }
+        
+        .availability-form input[type="date"]::before {
+            color: #6c757d;
+            content: attr(placeholder);
+        }
+        
+        .availability-form input[type="date"]:focus::before,
+        .availability-form input[type="date"]:valid::before {
+            content: "";
+        }
+    }

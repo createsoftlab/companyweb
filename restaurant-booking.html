@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurant-booking.css">
+    <link rel="stylesheet" href="style-home-footer.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<style>
+    .carousel-inner img {
+      height: 400px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+    <div id="autoCarousel" class="carousel slide mt-5 " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/restuarant1.jpg" class="d-block w-100" alt="Hotel 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/restaurant2.jpg" class="d-block w-100" alt="Hotel 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/restuarant3.jpg" class="d-block w-100" alt="Hotel 3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/restaurant4.jpg" class="d-block w-100" alt="Hotel 4">
+          </div>
+        </div>
+    
+        <!-- Optional controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#autoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#autoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+      
+      
+      
+      <!---------------------------check form------------------------>
+      <div class="container availability-form">
+        <div class="row">
+            <div class="col-12 bg-white shadow p-4 rounded">
+                <h5 class="mb-4">Check Booking Availabillity</h5>
+                <form>
+                    <div class="row align-items-end">
+                        <div class="col-12 col-md-6 col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Check-in</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Check-out</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Adult</label>
+                            <select class="form-select shadow-none">
+                                
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div>
+      
+                        <div class="col-12 col-md-6 col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Children</label>
+                            <select class="form-select shadow-none">
+                                
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div>
+      
+                        <div class="col-12 col-md-12 col-lg-1 mb-lg-3 mt-2">
+                            <button type="submit" class="btn-primary text-white  shadow-none custom-bg">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div id="multiImageGallery" class="carousel1-slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+      
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/restaurant2.jpg" class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="col-md-4">
+                <img src="images/restaurant4.jpg" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="col-md-4">
+                <img src="images/restaurant5.jpg" class="d-block w-100" alt="Image 3">
+              </div>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/restuarant1.jpg" class="d-block w-100" alt="Image 4">
+              </div>
+              <div class="col-md-4">
+                <img src="images/restuarant6.jpg" class="d-block w-100" alt="Image 5">
+              </div>
+              <div class="col-md-4">
+                <img src="images/restaurant2.jpg" class="d-block w-100" alt="Image 6">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/restuarant3.jpg" class="d-block w-100" alt="Image 4">
+              </div>
+              <div class="col-md-4">
+                <img src="images/apartment2.jpg" class="d-block w-100" alt="Image 5">
+              </div>
+              <div class="col-md-4">
+                <img src="images/apartment10.jpg" class="d-block w-100" alt="Image 6">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Add more carousel-item rows as needed -->
+      
+        </div>
+      
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#multiImageGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#multiImageGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+      <div class="deals-for-the-weekend container my-5">
+        <div class="row mb-0">
+          <div class="col-12">
+            <h4>Deals for the weekend</h4>
+            <p>Experience everything this city has to offer</p>
+          </div>
+        </div>
+      
+        <div class="position-relative">
+          <!-- Left arrow -->
+          <button class="slider-arrow slider-left position-absolute top-50 start-0 translate-middle-y z-3 btn btn-light rounded-pill">
+            <i class='bx bx-chevron-left fs-3'></i>
+          </button>
+      
+          <!-- Scrollable card wrapper -->
+          <div class="scroll-wrapper d-flex overflow-auto px-3 gap-3">
+            <!-- Card -->
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restaurant4.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+      
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restaurant5.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restuarant6.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-left gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restaurant2.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restaurant4.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restuarant1.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restuarant3.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+            <div class="deals-for-weekend-cover card text-center flex-shrink-0">
+              <div class="deals-for-weekend-image-cover">
+                <img src="images/restaurant4.jpg" alt="Colombo" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="deals-for-weekend-description p-3">
+                <label class="deal-label">
+                    <div class="star-rating">
+                        <span class="star" data-value="5">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="1">★</span>
+                    </div>
+                </label>
+                <h6 class="mt-2">Grand bell restaurant colombo</h6>
+                <p class="text-muted">Colombo, Sri Lanka</p>
+                <div class="last-desc d-flex justify-content-center gap-2 flex-wrap">
+                  <p class="mb-0 small">2 nights</p>
+                  <p class="mb-0 small text-danger text-decoration-line-through">LKR 101,352</p>
+                  <p class="mb-0 fw-bold">LKR 63,400</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-arrow slider-right position-absolute top-50 end-0 translate-middle-y z-3 btn btn-light rounded-pill">
+            <i class='bx bx-chevron-right fs-3'></i>
+          </button>
+        </div>
+        
+      </div>
+      <section class="our container my-5">
+        <div class="row mb-0">
+            <div class="col-12 mb-2">
+              <h4>Restaurants</h4>
+             
+            </div>
+        </div>
+        <div class="container-our container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <aside class="filters-our">
+                        <h3>Star rating</h3>
+                        <label><input type="checkbox"> 5 stars</label>
+                        <label><input type="checkbox"> 4 stars</label>
+                        <label><input type="checkbox"> 3 stars</label>
+                        <label><input type="checkbox"> 2 stars</label>
+                        <label><input type="checkbox"> 1 star</label>
+                        
+                        <h3 class="mt-4">Review score</h3>
+                        <label><input type="checkbox"> Exceptional 9+</label>
+                        <label><input type="checkbox"> Very good 8+</label>
+                        <label><input type="checkbox"> Good 7+</label>
+                        <label><input type="checkbox"> Pleasant 6+</label>
+                    </aside>
+                </div>
+                <div class="col-lg-9 col-md-8">
+                    <main class="hotel-section-our">
+                        <!-- <div class="tabs-our">
+                          <button class="tab-btn active1 mb-2" data-tab="top-picks">Our top picks</button>
+                          <button class="tab-btn mb-2" data-tab="lowest-price">Lowest price first</button>
+                          <button class="tab-btn mb-2" data-tab="nearest">Nearest to</button>
+                          <button class="tab-btn mb-2" data-tab="best-reviewed">Best reviewed</button>
+                        </div> -->
+                        <ul class="nav nav-tabs justify-content-center mb-4" id="listingTabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#our-top-picks">Our top picks</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#lowest-price">Lowest price first</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#nearestTo">Nearest to</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#bestReviewed">Best reviewed</a>
+                            </li>
+                          </ul>
+                        
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="our-top-picks">
+                              <div class="row g-4 mt-3">
+                                <!-- hotel-card elements here -->
+                                <div class="col-12 hotel-card-wrap">
+                                    <div class="hotel-card">
+                                        <div class="card-img">
+                                            <img src="images/hotel3.png" alt="Hotel Beach">
+                                          </div>
+                                        <!-- Section 2: Description -->
+                                        <div class="card-desc">
+                                            <h2>Mount Lavinia Hotel</h2>
+                                            <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                            <div class="tags">
+                                            <span>Private beach</span>
+                                            <span>Free Wi-Fi</span>
+                                            <span>Swimming pool</span>
+                                            </div>
+                                            <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                        </div>
+                                    
+                                        <!-- Section 3: Price Box -->
+                                        <div class="price-box">
+                                            <p>Excellent<br><small>2088 reviews</small></p>
+                                            <span class="rating">8.0</span>
+                                            <p class="price">USD 75</p>
+                                            <button>book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 hotel-card-wrap">
+                                    <div class="hotel-card">
+                                        <div class="card-img">
+                                            <img src="images/hotel3.png" alt="Hotel Beach">
+                                          </div>
+                                        <!-- Section 2: Description -->
+                                        <div class="card-desc">
+                                            <h2>Mount Lavinia Hotel</h2>
+                                            <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                            <div class="tags">
+                                            <span>Private beach</span>
+                                            <span>Free Wi-Fi</span>
+                                            <span>Swimming pool</span>
+                                            </div>
+                                            <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                        </div>
+                                    
+                                        <!-- Section 3: Price Box -->
+                                        <div class="price-box">
+                                            <p>Excellent<br><small>2088 reviews</small></p>
+                                            <span class="rating">8.0</span>
+                                            <p class="price">USD 75</p>
+                                            <button>book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                      
+                                <div class="col-12 hotel-card-wrap">
+                                    <div class="hotel-card">
+                                        <div class="card-img">
+                                            <img src="images/hotel3.png" alt="Hotel Beach">
+                                          </div>
+                                        <!-- Section 2: Description -->
+                                        <div class="card-desc">
+                                            <h2>Mount Lavinia Hotel</h2>
+                                            <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                            <div class="tags">
+                                            <span>Private beach</span>
+                                            <span>Free Wi-Fi</span>
+                                            <span>Swimming pool</span>
+                                            </div>
+                                            <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                        </div>
+                                    
+                                        <!-- Section 3: Price Box -->
+                                        <div class="price-box">
+                                            <p>Excellent<br><small>2088 reviews</small></p>
+                                            <span class="rating">8.0</span>
+                                            <p class="price">USD 75</p>
+                                            <button>book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                      
+                                <div class="col-12 hotel-card-wrap">
+                                    <div class="hotel-card">
+                                        <div class="card-img">
+                                            <img src="images/hotel3.png" alt="Hotel Beach">
+                                          </div>
+                                        <!-- Section 2: Description -->
+                                        <div class="card-desc">
+                                            <h2>Mount Lavinia Hotel</h2>
+                                            <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                            <div class="tags">
+                                            <span>Private beach</span>
+                                            <span>Free Wi-Fi</span>
+                                            <span>Swimming pool</span>
+                                            </div>
+                                            <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                        </div>
+                                    
+                                        <!-- Section 3: Price Box -->
+                                        <div class="price-box">
+                                            <p>Excellent<br><small>2088 reviews</small></p>
+                                            <span class="rating">8.0</span>
+                                            <p class="price">USD 75</p>
+                                            <button>book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                    <!-- additional hotel card -->
+                                    <div class="col-12 hotel-card-wrap extra-card d-none">
+                                        <div class="hotel-card">
+                                            <div class="card-img">
+                                                <img src="images/hotel3.png" alt="Hotel Beach">
+                                              </div>
+                                            <!-- Section 2: Description -->
+                                            <div class="card-desc">
+                                                <h2>Mount Lavinia Hotel</h2>
+                                                <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                                <div class="tags">
+                                                <span>Private beach</span>
+                                                <span>Free Wi-Fi</span>
+                                                <span>Swimming pool</span>
+                                                </div>
+                                                <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                            </div>
+                                        
+                                            <!-- Section 3: Price Box -->
+                                            <div class="price-box">
+                                                <p>Excellent<br><small>2088 reviews</small></p>
+                                                <span class="rating">8.0</span>
+                                                <p class="price">USD 75</p>
+                                                <button>book now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 hotel-card-wrap extra-card d-none">
+                                        <div class="hotel-card">
+                                            <div class="card-img">
+                                                <img src="images/hotel3.png" alt="Hotel Beach">
+                                              </div>
+                                            <!-- Section 2: Description -->
+                                            <div class="card-desc">
+                                                <h2>Mount Lavinia Hotel</h2>
+                                                <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                                <div class="tags">
+                                                <span>Private beach</span>
+                                                <span>Free Wi-Fi</span>
+                                                <span>Swimming pool</span>
+                                                </div>
+                                                <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                            </div>
+                                        
+                                            <!-- Section 3: Price Box -->
+                                            <div class="price-box">
+                                                <p>Excellent<br><small>2088 reviews</small></p>
+                                                <span class="rating">8.0</span>
+                                                <p class="price">USD 75</p>
+                                                <button>book now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                
+                            </div>
+                            <div class="tab-pane fade"  id="lowest-price">
+                                <div class=" row g-4 mt-3"  >
+                                    <!-- hotel-card elements here -->
+                                      <div class="col-12 hotel-card-wrap">
+                                          <div class="hotel-card">
+                                              <div class="card-img">
+                                                  <img src="images/hotel3.png" alt="Hotel Beach">
+                                              </div>
+                                              <!-- Section 2: Description -->
+                                              <div class="card-desc">
+                                                  <h2>Mount Lavinia Hotel</h2>
+                                                  <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                                  <div class="tags">
+                                                  <span>Private beach</span>
+                                                  <span>Free Wi-Fi</span>
+                                                  <span>Swimming pool</span>
+                                                  </div>
+                                                  <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                              </div>
+                                          
+                                              <!-- Section 3: Price Box -->
+                                              <div class="price-box">
+                                                  <p>Excellent<br><small>2088 reviews</small></p>
+                                                  <span class="rating">8.0</span>
+                                                  <p class="price">USD 75</p>
+                                                  <button>book now</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  
+                                      <div class="col-12 hotel-card-wrap">
+                                          <div class="hotel-card">
+                                              <div class="card-img">
+                                                  <img src="images/hotel3.png" alt="Hotel Beach">
+                                                </div>
+                                              <!-- Section 2: Description -->
+                                              <div class="card-desc">
+                                                  <h2>Mount Lavinia Hotel</h2>
+                                                  <p class="location">📍 Mount Lavinia Beach - <a href="#">View on map</a></p>
+                                                  <div class="tags">
+                                                  <span>Private beach</span>
+                                                  <span>Free Wi-Fi</span>
+                                                  <span>Swimming pool</span>
+                                                  </div>
+                                                  <p class="description">"Excellent ocean view rooms with a relaxing vibe."</p>
+                                              </div>
+                                          
+                                              <!-- Section 3: Price Box -->
+                                              <div class="price-box">
+                                                  <p>Excellent<br><small>2088 reviews</small></p>
+                                                  <span class="rating">8.0</span>
+                                                  <p class="price">USD 75</p>
+                                                  <button>book now</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade" id="nearestTo">
+                                <div class="row g-4 mt-3">
+                                  <!-- hotel-card elements here -->
+                                  
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="bestReviewed">
+                                <div class="row g-4 mt-3">
+                                  <!-- hotel-card elements here -->
+                                  
+                                </div>
+                              </div>
+                         </div>
+                          
+                              <div class="see-more-container">
+                                <button class="see-more-btn ">See More</button>
+                              </div>
+                              <div class="see-less-container">
+                                <button class="see-less-btn " style="display: none;">See Less</button>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Hotel Cards - Top Picks -->
+                        
+                        
+                    </main>
+                </div>
+            </div>
+      
+        
+        </div>
+      </section>
+
+      <!-- Recently Asked Questions Section -->
+      <section class="container my-5">
+        <h4 class=" mb-5">Recently Asked Questions</h4>
+        <div class="row g-4">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <div class="accordion" id="faqAccordionLeft">
+      
+              <!-- Q1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false">
+                    What is the cancellation policy?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqAccordionLeft">
+                  <div class="accordion-body">
+                    You can cancel your reservation up to 24 hours in advance for a full refund.
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Q2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false">
+                    Are walk-ins allowed?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordionLeft">
+                  <div class="accordion-body">
+                    Yes, we accept walk-ins depending on table availability.
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Q3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false">
+                    Is outdoor seating available?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordionLeft">
+                  <div class="accordion-body">
+                    Yes, we offer outdoor seating on a first-come, first-served basis.
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <div class="accordion" id="faqAccordionRight">
+      
+              <!-- Q4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false">
+                    Do you offer vegetarian or vegan options?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAccordionRight">
+                  <div class="accordion-body">
+                    Yes, we have a full vegetarian and vegan menu available.
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Q5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false">
+                    Is parking available?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#faqAccordionRight">
+                  <div class="accordion-body">
+                    Yes, we provide free valet parking for all our guests.
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Q6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false">
+                    Can I book a private dining area?
+                    <i class="fa fa-chevron-down ms-auto"></i>
+                  </button>
+                </h2>
+                <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#faqAccordionRight">
+                  <div class="accordion-body">
+                    Yes, we have private spaces for group events and celebrations.
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="footer-wrapper">
+        <div class="footer-cover">
+            <div class="email-information">
+                <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+            </div>
+            <div class="all-information-cover">
+                <div class="first-line-of-information-cover">
+                    <div class="top-category">
+                        <h6>Top Category</h6>
+                        <div class="top-category-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Technology</a></li>
+                                    <li><a href="#">Spa and facial</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Sports</a></li> 
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Electricals</a></li>
+                                    <li><a href="#">Automobiles</a></li>
+                                    <li><a href="#">Transportation</a></li>
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class="trending-category">
+                        <h6>Trending Category</h6>
+                        <div class="trending-category-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Hospitals</a></li>
+                                    <li><a href="#">Restuarants</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Sports</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Electricals</a></li>
+                                    <li><a href="#">Automobiles</a></li>
+                                    <li><a href="#">Transportation</a></li>                  
+                                </ul>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="help-support">
+                        <h6>Help & Support</h6>
+                        <div class="help-support-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Feedback</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of use</a></li>
+                                </ul>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="second-line-of-information-cover">
+                    <div class="popular-tags">
+                        <h6>popular tags</h6>
+                        <div class="popular-tags-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                </ul>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="contact-details-cover">
+                <div class="contact-information1">
+                    <h6>Get in touch</h6>
+                    <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                    <p>Phone: +01 5426 24400</p>
+                    <p>Email: rn34@gmail.com</p>
+                </div>
+                <div class="download-information">
+                    <h6>Download our free Mobile Apps</h6>
+                        <ul>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                        </ul>
+                </div>           
+                <div class="social-media-details">
+                    <h6>social media</h6>
+                        <ul>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                        </ul>
+                </div>                                                           
+            </div>
+
+            <div class="countries">
+                <ul>
+                    <li>Australia</li>
+                    <li>UK</li>
+                    <li>India</li>
+                    <li>Germany</li>
+                    <li>China</li>
+                    <li>France</li>
+                </ul>
+                
+            </div>
+            <div class="footer-last">
+                <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+            </div>
+            
+        </div>
+    </footer>  
+
+
+
+      <script>
+        // Tabs
+        document.querySelectorAll('.tab-btn').forEach(button => {
+          button.addEventListener('click', () => {
+            const tab = button.getAttribute('data-tab');
+      
+            // Toggle active tab button
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active1'));
+            button.classList.add('active1');
+      
+            // Toggle tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                const isTargetTab = content.getAttribute('data-content') === tab;
+              content.classList.toggle('active', isTargetTab);
+              if (content.getAttribute('data-content') === tab) {
+                content.classList.add('active');
+      
+                // Hide all cards beyond the first 4
+                const cards = content.querySelectorAll('.hotel-card-wrap');
+                cards.forEach((card, index) => {
+                  if (index >= 4) {
+                    card.classList.add('hidden-card');
+                    card.style.display = 'none';
+                  } else {
+                    card.classList.remove('hidden-card');
+                    card.style.display = 'block';
+                  }
+                });
+      
+                // Show the "See More" button only if more than 4 cards exist
+                const seeMoreBtn = document.querySelector('.see-more-btn');
+          seeMoreBtn.style.display = cards.length > 4 ? 'inline-block' : 'none';
+              }
+            });
+          });
+        });
+      
+        // See More
+        document.querySelector('.see-more-btn').addEventListener('click', () => {
+          const activeTab = document.querySelector('.tab-content.active');
+          const hiddenCards = activeTab.querySelectorAll('.hidden-card');
+          hiddenCards.forEach(card => {
+            card.style.display = 'block';
+            });
+         
+          document.querySelector('.see-more-btn').style.display = 'none';
+        });
+      
+        // Initial hide for all tab cards beyond 4
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.tab-content').forEach(content => {
+      const cards = content.querySelectorAll('.hotel-card-wrap');
+      cards.forEach((card, index) => {
+        if (index >= 4) {
+          card.classList.add('hidden-card');
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Show see more only for the active tab if needed
+    const activeTab = document.querySelector('.tab-content.active');
+    const seeMoreBtn = document.querySelector('.see-more-btn');
+    const activeCards = activeTab.querySelectorAll('.hotel-card-wrap');
+    seeMoreBtn.style.display = activeCards.length > 4 ? 'inline-block' : 'none';
+  });
+      </script>
+      
+      
+
+
+
+
+      <script>
+        const scrollWrapper = document.querySelector('.scroll-wrapper');
+        const btnLeft = document.querySelector('.slider-left');
+        const btnRight = document.querySelector('.slider-right');
+      
+        btnLeft.addEventListener('click', () => {
+          scrollWrapper.scrollBy({
+            left: -250, // Adjust based on card width
+            behavior: 'smooth'
+          });
+        });
+      
+        btnRight.addEventListener('click', () => {
+          scrollWrapper.scrollBy({
+            left: 250,
+            behavior: 'smooth'
+          });
+        });
+      
+        // Optional: Auto scroll every few seconds
+        setInterval(() => {
+          scrollWrapper.scrollBy({
+            left: 250,
+            behavior: 'smooth'
+          });
+        }, 4000); // 4 seconds
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f5f8fb;
+}
+
+/* Banner Section */
+.banner {
+    background: /*linear-gradient(135deg, #00aaff, #0077cc)*/linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url(images/baner.png) ;;
+    color: white;
+    padding: 80px 0;
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    
+    cursor: pointer;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input, .search-box select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background: #0077cc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/*******************************************************/
+
+.main-container-job-category {
+    display: flex;
+    padding: 50px;
+}
+
+.filters {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.filters h3 {
+    margin-top: 0;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.industry-btn.selected {
+    background-color: #02a9f7;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.job-listings {
+    flex: 1;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.job-category-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+.job-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.job-category-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.save-job:hover {
+    color: #ff9800;
+    cursor: pointer;
+}
+
+.job-details-category h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.job-details-category p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.job-meta {
+    margin-left: auto;
+    color: gray;
+}

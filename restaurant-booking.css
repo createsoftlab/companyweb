@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.primary-btn {
+  padding: 15px 40px;
+  background: blue;
+  font-weight: bold;
+  color: white;
+}
+
+.secondary-btn {
+  padding: 15px 40px;
+  background: none;
+  border: 2px solid white;
+  font-weight: bold;
+  color: white;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+/* Swiper Carousel Styling */
+.swiper-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Make sure images fully cover slide area */
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Availability Form Styling */
+  .availability-form {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .custom-bg {
+    background-color: #0d6efd; /* Bootstrap primary */
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  .custom-bg:hover {
+    background-color: #0b5ed7;
+  }
+  
+  .deals-for-weekend{
+ 
+    width: 100%;
+    margin: 0;
+  }
+  .deals-for-weekend-cover {
+    width: 250px;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .deals-for-weekend-image-cover {
+    height: 180px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scroll-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .deals-for-weekend {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  .deals-for-weekend-image-cover img {
+    height: 100%;
+    width: 100%;
+    
+    object-fit: cover;
+  }
+  .deals-for-weekend-description{
+    font-size: 14px;
+  }
+  .deal-label {
+    background-color: var(--fifth-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .deals-for-weekend .last-desc p {
+    margin-bottom: 0;
+  }
+  
+  
+  
+  .deals-for-weekend .slider-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .deals-for-weekend .slider-arrow:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .deals-for-weekend .slider-left {
+    left: 10px;
+  }
+  
+  .deals-for-weekend .slider-right {
+    right: 10px;
+  } 
+  .deals-for-weekend .star-rating .star{
+    color: yellow;
+  }
+  .btn-primary {
+    background-color: var(--fifth-color); /* Optional: match your theme */
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: darken(var(--fifth-color), 10%);
+  }
+  /**/
+  .carousel1-slide .carousel-inner {
+    padding: 20px;
+  }
+
+   .carousel1-slide .carousel-item > .row {
+    display: flex;
+  }
+
+  .carousel1-slide .carousel-item img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+  }
+/**/
+  .accordion-button::after {
+    display: none; /* remove default arrow */
+  }
+  .accordion-button i {
+    transition: transform 0.3s ease;
+  }
+  .accordion-button:not(.collapsed) i {
+    transform: rotate(180deg);
+  }
+
+  .our {
+    background: #f8f9fa;
+    padding: 40px 0;
+  }
+  
+  .our h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .filters-our {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
+  
+  .filters-our label {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  .tabs-our .tab-btn {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background: #dee2e6;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .tabs-our .active1 {
+    background: #0d6efd;
+    color: white;
+  }
+  
+  /* .tab-content {
+    display: none;
+  }
+   */
+  .tab-content.active {
+    display: flex;
+    
+    flex-wrap: wrap;
+  }
+  
+  .hotel-card-wrap {
+    width: 100%;
+  }
+  
+  .hotel-card {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    gap: 20px;
+  flex-wrap: wrap;
+  }
+  .card-img {
+    flex: 1 1 150px;
+    max-width: 200px;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  
+  }
+  
+  
+  .card-desc {
+    flex: 2 1 300px;
+  }
+  
+  .card-desc h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .card-desc .location {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .card-desc .tags span {
+    background: #e9ecef;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+    margin: 4px 4px 0 0;
+    display: inline-block;
+  }
+  
+  .card-desc .description {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Price Box Section */
+  .price-box {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  .price-box p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .price-box .rating {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .price-box .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .price-box button {
+    margin-top: 10px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .see-more-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .see-more-container button{
+    max-width: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    text-wrap: nowrap;
+  }
+  .see-more-container button:hover{
+    background-color: #0b5ed7;
+  }
+  
+  @media (max-width: 991px) {
+    .availability-form {
+      padding: 0 15px;
+    }
+  
+    .availability-form .row > div {
+      margin-bottom: 15px;
+    }
+  
+    .availability-form button {
+      width: 100%;
+    }
+    .hotel-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .card-img,
+    .card-desc,
+    .price-box {
+      width: 100%;
+      max-width: 100%;
+      max-height: max-content;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;justify-content: center;
+      align-items: center;
+  
+    }
+  
+  }
+  /* Stack vertically on small screens */
+@media (max-width: 768px) {
+    .hotel-card {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .card-img,
+  .card-desc,
+  .price-box {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;justify-content: center;
+    align-items: center;
+
+  }
+
+  .price-box {
+    text-align: center;
+  }
+    
+  
+    .card-desc {
+      text-align: center;
+    }
+  }
+  @media(max-width:468px){
+    .card-img,
+  .card-desc,
+  .price-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  }
+
+  
+  

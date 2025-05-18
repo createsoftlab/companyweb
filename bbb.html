@@ -1,0 +1,286 @@
+<style>
+  .tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.our {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.container-our {
+  display: flex;
+  gap: 20px;
+}
+
+.filters-our {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.filters-our label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hotel-section-our {
+  flex: 1;
+}
+
+.tabs-our {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs-our button {
+  padding: 10px 15px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabs-our .active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.hotel-card {
+  display: flex;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.hotel-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+.hotel-info h2 {
+  margin: 0 0 5px;
+}
+
+.location {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background: #e0e0e0;
+  padding: 5px 8px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.description {
+  margin-top: 10px;
+  color: #333;
+}
+
+.price-box {
+  text-align: right;
+  min-width: 150px;
+}
+
+.price-box .rating {
+  display: inline-block;
+  border: 2px solid #4285f4;
+  color: #4285f4;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+
+.price-box .price {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-box button {
+  background: #4285f4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.see-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.see-more-btn {
+  background-color: #4285f4;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #3367d6;
+}
+
+
+</style>
+
+
+<div class="tabs-our">
+  <button class="tab-btn active" data-tab="top-picks">Our top picks</button>
+  <button class="tab-btn" data-tab="lowest-price">Lowest price first</button>
+  <button class="tab-btn" data-tab="nearest">Nearest to</button>
+  <button class="tab-btn" data-tab="best-reviewed">Best reviewed</button>
+</div>
+
+<!-- Hotel Cards - Top Picks -->
+<div class="tab-content active" data-content="top-picks">
+  <!-- hotel-card elements here -->
+  <div class="hotel-card">
+    <img src="images/hotel3.png" alt="Hotel Beach">
+    <div class="hotel-info">
+      <h2>Mount Lavinia Hotel</h2>
+      <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+      <div class="tags">
+        <span>Private beach</span>
+        <span>Free Wi-Fi</span>
+        <span>Swimming pool</span>
+        <span>+5</span>
+      </div>
+      <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+    </div>
+    <div class="price-box">
+      <p>Excellent<br><small>2088 reviews</small></p>
+      <span class="rating">8.0</span>
+      <p class="price">USD 75</p>
+      <button>book now</button>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="images/hotel3.png" alt="Hotel Beach">
+    <div class="hotel-info">
+      <h2>Mount Lavinia Hotel</h2>
+      <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+      <div class="tags">
+        <span>Private beach</span>
+        <span>Free Wi-Fi</span>
+        <span>Swimming pool</span>
+        <span>+5</span>
+      </div>
+      <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+    </div>
+    <div class="price-box">
+      <p>Excellent<br><small>2088 reviews</small></p>
+      <span class="rating">8.0</span>
+      <p class="price">USD 75</p>
+      <button>book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hotel Cards - Lowest Price -->
+<div class="tab-content" data-content="lowest-price">
+  <!-- hotel-card elements here -->
+  <div class="hotel-card">
+    <img src="images/hotel3.png" alt="Budget Hotel">
+    <div class="hotel-info">
+      <h2>Colombo Budget Inn</h2>
+      <p class="location">📍 Maradana, Colombo - <a href="#">View on map</a></p>
+      <div class="tags">
+        <span>Free Wi-Fi</span>
+        <span>AC Room</span>
+      </div>
+      <p class="description">"Clean and affordable stay for backpackers."</p>
+    </div>
+    <div class="price-box">
+      <p>Very Good<br><small>560 reviews</small></p>
+      <span class="rating">7.6</span>
+      <p class="price">USD 30</p>
+      <button>book now</button>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="images/hotel3.png" alt="Budget Hotel">
+    <div class="hotel-info">
+      <h2>Colombo Budget Inn</h2>
+      <p class="location">📍 Maradana, Colombo - <a href="#">View on map</a></p>
+      <div class="tags">
+        <span>Free Wi-Fi</span>
+        <span>AC Room</span>
+      </div>
+      <p class="description">"Clean and affordable stay for backpackers."</p>
+    </div>
+    <div class="price-box">
+      <p>Very Good<br><small>560 reviews</small></p>
+      <span class="rating">7.6</span>
+      <p class="price">USD 30</p>
+      <button>book now</button>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Hotel Cards - Nearest -->
+<div class="tab-content" data-content="nearest">
+  <!-- hotel-card elements here -->
+</div>
+
+<!-- Hotel Cards - Best Reviewed -->
+<div class="tab-content" data-content="best-reviewed">
+  <!-- hotel-card elements here -->
+</div>
+
+
+
+  <script>
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons and contents
+      tabButtons.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // Add active to clicked button
+      btn.classList.add('active');
+
+      // Show the corresponding content
+      const tab = btn.getAttribute('data-tab');
+      document.querySelector(`[data-content="${tab}"]`).classList.add('active');
+    });
+  });
+</script>
+

@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style-home-footer.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Banner with Search */
+    .banner {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      padding: 70px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      animation: slideDown 1s ease-out;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      width: 80%;
+      max-width: 600px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+    }
+    .search-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  max-width: 600px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+
+
+
+
+
+    /*************** Product Details ************/
+    .product-section {
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  animation: fadeInUp 1s ease-out;
+}
+
+
+
+.image-gallery {
+      flex: 1;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 8px;
+      height: 400px;
+      object-fit: cover;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .thumbnails img {
+  width: 70px;
+  height: 70px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.thumbnails img:hover {
+  border-color: #007BFF;
+  transform: scale(1.1) rotate(2deg); /* optional rotate for fun effect */
+}
+
+
+.product-details {
+  flex: 1.5;
+  max-width: 800px;
+  padding:50px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-details h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.product-details p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.stars i {
+  color: #ffd700;
+}
+
+.price {
+  font-size: 28px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.discount {
+  color: #d9534f;
+}
+
+.availability {
+  color: #5bc0de;
+}
+
+.payment-methods {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.quantity-section {
+  margin-top: 20px;
+}
+
+.quantity-section input {
+  padding: 8px;
+  width: 50px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buy-now, .more-details {
+  padding: 12px 25px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buy-now {
+  background: #007bff;
+  color: white;
+}
+
+.buy-now:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.more-details {
+  background: #f0f0f0;
+  color: #333;
+  margin-left: 15px;
+}
+
+.more-details:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.payment-methods {
+  background: #f8f9fa;
+  border-left: 4px solid #007BFF;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: slideIn 0.8s ease;
+}
+
+.payment-methods p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.payment-methods strong {
+  color: #007BFF;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .product-section {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .product-details {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .main-image {
+    height: 300px;
+  }
+
+  .buy-now, .more-details {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    gap: 20px;
+  }
+
+  .product-details h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .main-image {
+    height: 250px;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details {
+    padding: 20px;
+  }
+
+  .product-details h2 {
+    font-size: 20px;
+  }
+
+  .main-image {
+    height: 200px;
+  }
+
+  .thumbnails img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .buy-now, .more-details {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quantity-section input {
+    width: 40px;
+  }
+}
+
+
+
+    
+
+    
+
+
+/**********************************************/
+.other-products {
+  padding: 40px 20px;
+  background: #f4f4f4;
+  position: relative;
+}
+
+.other-products h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+.cards-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 250px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body h4 {
+  margin: 10px 0 5px;
+}
+
+.card-body .price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.buy-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #0056b3;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-btn {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  pointer-events: all;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+/* Slider Arrow Styles */
+.slider-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Responsive Styles for Other Products Section */
+
+@media (max-width: 1024px) {
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    min-width: 220px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .card-body h4 {
+    font-size: 18px;
+  }
+
+  .card-body .price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cards {
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    min-width: 200px;
+  }
+
+  .slider-controls {
+    display: none; /* Hide arrows on smaller screens for scrollable UX */
+  }
+}
+
+@media (max-width: 480px) {
+  .other-products {
+    padding: 30px 10px;
+  }
+
+  .other-products h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    min-width: 180px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .card-body h4 {
+    font-size: 16px;
+  }
+
+  .buy-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+
+
+   
+
+
+
+
+/*********************************************/
+.feedback-section h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: bold;
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.feedback {
+  background: #fff;
+  padding: 20px ;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.5s ease-in;
+}
+.feedback:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.stars {
+  color: #f7c948;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.see-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #0056b3;
+}
+/* Responsive styles for Feedback Section */
+
+@media (max-width: 1024px) {
+  .feedback {
+    padding: 20px;
+  }
+
+  .user-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .see-more-btn {
+    font-size: 15px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-section h3 {
+    font-size: 24px;
+  }
+
+  .feedback {
+    padding: 18px;
+    margin-bottom: 12px;
+  }
+
+  .user-info img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .stars {
+    font-size: 14px;
+  }
+
+  .see-more-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-section h3 {
+    font-size: 20px;
+  }
+
+  .feedback {
+    padding: 15px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .user-info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stars {
+    font-size: 13px;
+  }
+
+  .see-more-btn {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+}
+
+
+
+/******************************************************/
+.post-feedback {
+  max-width: 800px;
+  margin: 40px auto 20px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.post-feedback h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+}
+
+.post-feedback input,
+.post-feedback textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.post-feedback input:focus,
+.post-feedback textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.post-feedback button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.post-feedback button:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Discover Our Featured Product</h1>
+    <div class="search-bar">
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search products...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Details Section -->
+  <section class="product-section">
+    <div class="image-gallery">
+      <img src="images/picture1.jpeg" class="main-image" id="mainImage" alt="Product Image">
+      <div class="thumbnails">
+        <img src="images/picture2.jpg" onclick="changeImage(this.src)">
+        <img src="images/picture3.jpeg" onclick="changeImage(this.src)">
+        <img src="images/picture4.jpeg" onclick="changeImage(this.src)">
+        <img src="images/picture4.jpeg" onclick="changeImage(this.src)">
+      </div>
+    </div>
+    <div class="product-details">
+      <h2>Smart Watch X200</h2>
+      <p>High performance smart watch with health tracking, waterproof body, and long battery life.<br><br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quia, recusandae voluptatibus incidunt alias atque praesentium illo aperiam eaque accusamus dolore perferendis nam libero adipisci modi, in obcaecati ullam aliquam.</p>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="price">Rs 199.99</p>
+      <p>Available Colors: Black, Blue, Red</p>
+      <p>Discount: <span class="discount">10% OFF</span></p>
+      <p>Stock Availability: <span class="availability">In Stock</span></p>
+  
+      <div class="payment-methods">
+        <p><strong>Payment Methods:</strong> Bank Transfer, Cash on Delivery</p>
+      </div>
+      
+      
+  
+      <div class="quantity-section">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+      </div>
+  
+      <div class="buttons">
+        <a href="payment.html"><button class="buy-now">Buy Now</button></a>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script>
+   function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+  
+  
+  
+  <!-- Other Products Section --
+<section class="other-products">
+    <h3>Related Products</h3>
+    
+  
+    <div class="cards-wrapper">
+      <div class="cards" id="productSlider">
+        <div class="card">
+          <img src="images/a1.jpeg" alt="">
+          <div class="card-body">
+            <h4>Smart Band Pro</h4>
+            <p class="price">$99</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/a2.jpeg" alt="">
+          <div class="card-body">
+            <h4>Fitness Tracker</h4>
+            <p class="price">$79</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/a3.jpeg" alt="">
+          <div class="card-body">
+            <h4>Classic Watch</h4>
+            <p class="price">$129</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+            <img src="images/a2.jpeg" alt="">
+            <div class="card-body">
+              <h4>Fitness Tracker</h4>
+              <p class="price">$79</p>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/a2.jpeg" alt="">
+            <div class="card-body">
+              <h4>Fitness Tracker</h4>
+              <p class="price">$79</p>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+  <script>
+    const slider = document.getElementById("productSlider");
+    const cardWidth = 270; // approx card + gap
+    let scrollPosition = 0;
+  
+    document.querySelector(".next").addEventListener("click", () => {
+      scrollPosition += cardWidth;
+      slider.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    });
+  
+    document.querySelector(".prev").addEventListener("click", () => {
+      scrollPosition -= cardWidth;
+      slider.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    });
+  </script>-->
+  <section class="other-products">
+    <h3>Related Products</h3>
+    
+    <div class="cards-wrapper">
+      <button class="slider-btn left-btn" id="prevBtn">←</button>
+      
+      <div class="cards" id="productSlider">
+        <div class="card">
+          <img src="images/a1.jpeg" alt="">
+          <div class="card-body">
+            <h4>Smart Band Pro</h4>
+            <p class="price">$99</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/a2.jpeg" alt="">
+          <div class="card-body">
+            <h4>Fitness Tracker</h4>
+            <p class="price">$79</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/a3.jpeg" alt="">
+          <div class="card-body">
+            <h4>Classic Watch</h4>
+            <p class="price">$129</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="card">
+            <img src="images/a2.jpeg" alt="">
+            <div class="card-body">
+              <h4>Fitness Tracker</h4>
+              <p class="price">$79</p>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/a2.jpeg" alt="">
+            <div class="card-body">
+              <h4>Fitness Tracker</h4>
+              <p class="price">$79</p>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/a2.jpeg" alt="">
+            <div class="card-body">
+              <h4>Fitness Tracker</h4>
+              <p class="price">$79</p>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+      </div>
+
+      <button class="slider-btn right-btn" id="nextBtn">→</button>
+    </div>
+</section>
+<script>
+  document.getElementById('nextBtn').addEventListener('click', function() {
+  const slider = document.getElementById('productSlider');
+  const cardWidth = document.querySelector('.card').offsetWidth;
+  const currentScroll = slider.scrollLeft;
+
+  slider.scrollLeft = currentScroll + cardWidth + 20; // 20px gap between cards
+});
+
+document.getElementById('prevBtn').addEventListener('click', function() {
+  const slider = document.getElementById('productSlider');
+  const cardWidth = document.querySelector('.card').offsetWidth;
+  const currentScroll = slider.scrollLeft;
+
+  slider.scrollLeft = currentScroll - cardWidth - 20; // 20px gap between cards
+});
+
+</script>
+  
+
+
+
+
+
+
+  
+
+  <!-- Customer Feedback Section -->
+  <section class="feedback-section">
+    <h3>Customer Feedback</h3>
+    <div class="feedback-list" id="feedbackList">
+      <div class="feedback">
+        <div class="user-info">
+          <img src="https://i.pravatar.cc/60?img=5" alt="User Image">
+          <div>
+            <strong>Jane Doe</strong>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Absolutely love this product! Great value for money and stylish too!</p>
+      </div>
+
+      <div class="feedback">
+        <div class="user-info">
+          <img src="https://i.pravatar.cc/60?img=5" alt="User Image">
+          <div>
+            <strong>Jane Doe</strong>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Absolutely love this product! Great value for money and stylish too!</p>
+      </div>
+
+      <div class="feedback">
+        <div class="user-info">
+          <img src="https://i.pravatar.cc/60?img=5" alt="User Image">
+          <div>
+            <strong>Jane Doe</strong>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Absolutely love this product! Great value for money and stylish too!</p>
+      </div>
+    </div>
+  
+    <div class="see-more-container">
+      <button class="see-more-btn">See More</button>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const feedbackList = document.getElementById('feedbackList');
+      const seeMoreBtn = document.querySelector('.see-more-btn');
+  
+      const moreFeedback = [
+        {
+          name: "John Smith",
+          img: "https://i.pravatar.cc/60?img=11",
+          stars: 5,
+          text: "High quality and fast shipping. Very satisfied!"
+        },
+        {
+          name: "Emily Clark",
+          img: "https://i.pravatar.cc/60?img=15",
+          stars: 4,
+          text: "Looks great and works well. Will buy again."
+        },
+        {
+          name: "David Lee",
+          img: "https://i.pravatar.cc/60?img=20",
+          stars: 5,
+          text: "Exceeded my expectations. Recommended!"
+        }
+      ];
+  
+      function renderStars(count) {
+        let starsHtml = "";
+        for (let i = 0; i < Math.floor(count); i++) {
+          starsHtml += '<i class="fas fa-star"></i>';
+        }
+        if (count % 1 !== 0) {
+          starsHtml += '<i class="fas fa-star-half-alt"></i>';
+        }
+        return starsHtml;
+      }
+  
+      seeMoreBtn.addEventListener('click', () => {
+        moreFeedback.forEach(fb => {
+          const feedbackDiv = document.createElement('div');
+          feedbackDiv.classList.add('feedback');
+          feedbackDiv.innerHTML = `
+            <div class="user-info">
+              <img src="${fb.img}" alt="User Image">
+              <div>
+                <strong>${fb.name}</strong>
+                <div class="stars">
+                  ${renderStars(fb.stars)}
+                </div>
+              </div>
+            </div>
+            <p>${fb.text}</p>
+          `;
+          feedbackList.appendChild(feedbackDiv);
+        });
+  
+        seeMoreBtn.style.display = "none"; // hide after loading more
+      });
+    });
+  </script>
+  
+  
+
+
+
+
+<!-- Post Feedback Form -->
+    <div class="post-feedback">
+      <h4>Post Your Feedback</h4>
+      <input type="text" id="name" placeholder="Your Name">
+      <textarea id="comment" rows="4" placeholder="Your feedback..."></textarea>
+      <button onclick="postFeedback()">Submit</button>
+    </div>
+  </section>
+
+  <script>
+    function postFeedback() {
+      const name = document.getElementById('name').value;
+      const comment = document.getElementById('comment').value;
+      if (!name || !comment) {
+        alert("Please fill both fields.");
+        return;
+      }
+
+      const feedbackList = document.getElementById('feedbackList');
+      const feedback = document.createElement('div');
+      feedback.className = 'feedback';
+      feedback.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+      feedbackList.appendChild(feedback);
+
+      // Clear form
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    }
+  </script>
+
+<footer class="footer-wrapper">
+  <div class="footer-cover">
+      <div class="email-information">
+          <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+      </div>
+      <div class="all-information-cover">
+          <div class="first-line-of-information-cover">
+              <div class="top-category">
+                  <h6>Top Category</h6>
+                  <div class="top-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Technology</a></li>
+                              <li><a href="#">Spa and facial</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li> 
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>
+                          </ul>
+                      </div>
+                  </div>                  
+              </div>
+              <div class="trending-category">
+                  <h6>Trending Category</h6>
+                  <div class="trending-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Hospitals</a></li>
+                              <li><a href="#">Restuarants</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li>
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>                  
+                          </ul>
+                      </div>
+                  </div>                   
+              </div>
+              <div class="help-support">
+                  <h6>Help & Support</h6>
+                  <div class="help-support-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Feedback</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                              <li><a href="#">Terms of use</a></li>
+                          </ul>
+                      </div>
+                  </div>                        
+              </div>
+          </div>
+          <div class="second-line-of-information-cover">
+              <div class="popular-tags">
+                  <h6>popular tags</h6>
+                  <div class="popular-tags-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                          </ul>
+                      </div>
+                  </div>    
+              </div>
+          </div>
+          
+      </div>
+      <div class="contact-details-cover">
+          <div class="contact-information1">
+              <h6>Get in touch</h6>
+              <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+              <p>Phone: +01 5426 24400</p>
+              <p>Email: rn34@gmail.com</p>
+          </div>
+          <div class="download-information">
+              <h6>Download our free Mobile Apps</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                  </ul>
+          </div>           
+          <div class="social-media-details">
+              <h6>social media</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                  </ul>
+          </div>                                                           
+      </div>
+
+      <div class="countries">
+          <ul>
+              <li>Australia</li>
+              <li>UK</li>
+              <li>India</li>
+              <li>Germany</li>
+              <li>China</li>
+              <li>France</li>
+          </ul>
+          
+      </div>
+      <div class="footer-last">
+          <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+      </div>
+      
+  </div>
+</footer>  
+
+
+
+
+
+
+
+
+</body>
+</html>

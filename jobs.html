@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-jobs.css">
+    <link rel="stylesheet" href="style-home.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+    
+
+    <section class="jobs-section">
+        <div class="jobs-heading" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url(images/company-cover.jpg) no-repeat;">
+            <div class="jobs-bg">
+                
+                <h2> Our Jobs List</h2>
+                <h3>Apply and Join with us</h3>
+                
+                <!--<p class="text">Lorem ipsum dolor sit amet, consectetur  quos minima eum quia, saepe iure libero? Nemo,<br> sunt magnam
+                    Lorem ipsum dolor sit, amet  saepe dignissimos natus dolorum, nulla, <br>ipsam officia  repellat quasi quo nesciunt aperiam ullam non.
+                </p>-->
+            </div>
+
+           
+
+
+            <section class="jobs-container">
+                <div class="jobs-wrapper">
+                    
+                    <!-- 🔹 Dropdown: Job Category -->
+                    <div class="dropdown">
+                        <select id="job-category">
+                            <option value="" disabled selected>Choose Job Category</option>
+                            <option value="IT">IT & Software</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Engineering">Engineering</option>
+                        </select>
+                    </div>
+        
+                    <!-- 🔹 Dropdown: Job Location -->
+                    <div class="dropdown">
+                        <select id="job-location">
+                            <option value="" disabled selected>Choose Location</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Jaffna">Jaffna</option>
+                            <option value="Kurunegala">Kurunegala</option>
+                        </select>
+                    </div>
+                    <!-- 🔹 Search Input -->
+                    <div class="jobs-cover">
+                        <input type="search" id="search-input" placeholder="Search job title here...">
+                    </div>
+        
+                    <!-- 🔹 Search Button -->
+                    <div class="jobs-search-icon">
+                        <button class="search-btn" id="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+        
+                    
+                </div>
+            </section>
+        
+        </div>
+    </section>
+
+
+<!------------------------------------------featured job----------------------------------------->
+
+
+
+
+            <section class="container">
+                    <div class="header">
+                        <h2>Featured Jobs</h2>
+                        <div class="sort-container">
+                            <label for="sort">Sort by</label>
+                            <select id="sort">
+                                <option value="default">Default</option>
+                                <option value="latest">Recent</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="job-list">
+                        <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+                          
+                        
+
+            
+                    
+            
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+            
+                        
+            
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                        
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-apply.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="job-details.html" class="job-card-link">
+                            <div class="job-card">
+                              <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
+                              <h4>
+                                Office Assistant 
+                                <i class="far fa-bookmark save-job" id="bookmark"></i>
+                              </h4>
+                              <div class="job-details">
+                                <p class="company-name">Nawaloka Hospitals PLC</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-Time</p>
+                                <span class="urgent-badge"><i class="fas fa-clock"></i> 4 days left</span>
+                              </div>
+                            </div>
+                          </a>
+            
+            
+                        
+                    </div>
+            
+                    
+            
+                    
+                </div>
+
+                <!-- Pagination -->
+                
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled" id="prevPage">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item" id="nextPage">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
+<!------------------------------------------------category-------------------------------------->
+   
+
+
+
+        <section class="job-category-section">
+            <h2>Job Categories</h2>
+
+            
+            
+          
+            <div class="job-category-wrapper">
+              
+          
+              <div class="job-category-container">
+                
+          
+                <div class="job-category-card">
+                  <i class="fa-solid fa-list-check"></i>
+                  <h3>Accountancy & Finance</h3>
+                  <p>Lorem ipsum dolor adipisicing elit. </p>
+                  <span><strong>504</strong> Job Posts</span>
+                  
+                  <a href="job-deatails.html" class="apply-btn">
+                    See more
+                  </a>
+                </div>
+          
+                <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                  <h3>Automobile</h3>
+                  <p>Lorem ipsum dolor adipisicing elit.</p>
+                  <span><strong>145</strong> Job Posts</span>
+                  <a href="job-deatails.html" class="apply-btn">
+                    See more
+                  </a>
+                </div>
+          
+                <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                  <h3>Business Management</h3>
+                  <p>Lorem ipsum dolor adipisicing elit.</p>
+                  <span><strong>1714</strong> Job Posts</span>
+                  <a href="job-deatails.html" class="apply-btn">
+                    See more
+                  </a>
+                </div>
+          
+                <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                  <h3>Administration / Secretarial</h3>
+                  <p>Lorem ipsum dolor adipisicing elit.</p>
+                  <span><strong>437</strong> Job Posts</span>
+                  <a href="job-deatails.html" class="apply-btn">
+                    See more
+                  </a>
+                </div>
+          
+                <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                  <h3>Banking & Financial Services</h3>
+                  <p>Lorem ipsum dolor adipisicing elit.</p>
+                  <span><strong>374</strong> Job Posts</span>
+                  <a href="job-deatails.html" class="apply-btn">
+                    See more
+                  </a>
+                </div>
+
+                <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Banking & Financial Services</h3>
+                    <p>Lorem ipsum dolor adipisicing elit.</p>
+                    <span><strong>374</strong> Job Posts</span>
+                    <a href="job-deatails.html" class="apply-btn">
+                        See more
+                      </a>
+                  </div>
+
+                  <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Banking & Financial Services</h3>
+                    <p>Lorem ipsum dolor adipisicing elit.</p>
+                    <span><strong>374</strong> Job Posts</span>
+                    <a href="job-deatails.html" class="apply-btn">
+                        See more
+                      </a>
+                  </div>
+
+                  <div class="job-category-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Administration / Secretarial</h3>
+                    <p>Lorem ipsum dolor adipisicing elit.</p>
+                    <span><strong>437</strong> Job Posts</span>
+                    <a href="job-deatails.html" class="apply-btn">
+                        See more
+                      </a>
+                  </div>
+          
+              </div>
+              
+          
+              
+            </div>
+            <button class="arrows left-arrow1">&#10094;</button>
+            <button class="arrows right-arrow1">&#10095;</button>
+            
+            
+    </section>
+    <script>
+        const container = document.querySelector('.job-category-container');
+        const leftArrow = document.querySelector('.left-arrow1');
+        const rightArrow = document.querySelector('.right-arrow1');
+      
+        const scrollAmount = 300; // Amount to scroll in pixels
+      
+        rightArrow.addEventListener('click', () => {
+          container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        });
+      
+        leftArrow.addEventListener('click', () => {
+          container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+          });
+        });
+      </script>
+    
+
+
+
+     <!-- --------------🔹 Banner Section ------------------------->
+ <section class="banner">
+    <div class="banner-content">
+        <h1>Find Your Dream Job</h1>
+        <p>Explore opportunities from top hiring companies</p>
+
+
+    </div>
+</section>
+
+<section class="advertisements-wrapper">
+    <div class="advertisements">               
+        <div class="advertisements-slider">
+           
+
+
+
+            <div class="advertisement-slide-items">
+                <img src="images/istockphoto.jpg" alt="Image1">
+                <img src="images/istockphoto2.jpg" alt="Image2">
+                <img src="images/istockphoto3.jpg" alt="Image3">
+                <img src="images/istockphoto4.jpg" alt="Image4">
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+
+
+
+
+    
+           
+<!-----------------------------top company--------------------->
+
+
+<div class="top-hiring-section">
+    <h2>Top Hiring Companies</h2>
+    <div class="slider-container">
+      <button class="arrow left" onclick="slideLeft()">&#8592;</button>
+  
+      <div class="card-slider" id="slider">
+        <a href="job-apply.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+          
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+
+          <a href="company-details.html" class="company-card-link">
+            <div class="company-card">
+              <img src="images/company-logo.png" alt="Company 1 Logo">
+              <h3>Company One</h3>
+              <p>42 Job Posts</p>
+            </div>
+          </a>
+        <!-- Add more cards here -->
+      </div>
+  
+      <button class="arrow right" onclick="slideRight()">&#8594;</button>
+    </div>
+  </div>
+  
+
+  <script>
+    const slider = document.getElementById('slider');
+  
+    function slideLeft() {
+      slider.scrollBy({ left: -250, behavior: 'smooth' });
+    }
+  
+    function slideRight() {
+      slider.scrollBy({ left: 250, behavior: 'smooth' });
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+    
+    <footer class="footer-wrapper">
+        <div class="footer-cover">
+            <div class="email-information">
+                <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+            </div>
+            <div class="all-information-cover">
+                <div class="first-line-of-information-cover">
+                    <div class="top-category">
+                        <h6>Top Category</h6>
+                        <div class="top-category-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Technology</a></li>
+                                    <li><a href="#">Spa and facial</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Sports</a></li> 
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Electricals</a></li>
+                                    <li><a href="#">Automobiles</a></li>
+                                    <li><a href="#">Transportation</a></li>
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class="trending-category">
+                        <h6>Trending Category</h6>
+                        <div class="trending-category-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Hospitals</a></li>
+                                    <li><a href="#">Restuarants</a></li>
+                                    <li><a href="#">Real Estate</a></li>
+                                    <li><a href="#">Sports</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Electricals</a></li>
+                                    <li><a href="#">Automobiles</a></li>
+                                    <li><a href="#">Transportation</a></li>                  
+                                </ul>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="help-support">
+                        <h6>Help & Support</h6>
+                        <div class="help-support-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Feedback</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of use</a></li>
+                                </ul>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="second-line-of-information-cover">
+                    <div class="popular-tags">
+                        <h6>popular tags</h6>
+                        <div class="popular-tags-list">
+                            <div class="list">
+                                <ul>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                    <li><a href="#">Real estate in Chennai</a></li>
+                                    <li><a href="#">Flat for rent in Melborn</a></li>
+                                    <li><a href="#">Real Estate in Illunious</a></li>
+                                    <li><a href="#">Enents in Thailand</a></li>
+                                    <li><a href="#">Schools in new york</a></li>
+                                </ul>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="contact-details-cover">
+                <div class="contact-information">
+                    <h6>Get in touch</h6>
+                    <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                    <p>Phone: +01 5426 24400</p>
+                    <p>Email: rn34@gmail.com</p>
+                </div>
+                <div class="download-information">
+                    <h6>Download our free Mobile Apps</h6>
+                        <ul>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                        </ul>
+                </div>           
+                <div class="social-media-details">
+                    <h6>social media</h6>
+                        <ul>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                        </ul>
+                </div>                                                           
+            </div>
+
+            <div class="countries">
+                <ul>
+                    <li>Australia</li>
+                    <li>UK</li>
+                    <li>India</li>
+                    <li>Germany</li>
+                    <li>China</li>
+                    <li>France</li>
+                </ul>
+                
+            </div>
+            <div class="footer-last">
+                <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+            </div>
+            
+        </div>
+    </footer>
+
+
+
+
+
+   <script src="script.js"></script>
+   <script src="pagination.js"></script>
+   
+
+    
+    
+
+
+
+</body>
+</html>

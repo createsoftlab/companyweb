@@ -1,0 +1,138 @@
+<style>
+
+
+.offer-section {
+  padding: 50px 20px;
+  background-color: #000;
+}
+
+.offer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.image-area {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-img.active {
+  opacity: 1;
+}
+
+.discount-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.text-area {
+  max-width: 400px;
+}
+
+.text-area h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text-area .highlight {
+  color: red;
+}
+
+.text-area p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+
+
+<section class="offer-section">
+  <div class="offer-container">
+    <!-- Image Slider -->
+    <div class="image-area">
+      <div class="slider">
+        <img src="shirt1.png" alt="Shirt 1" class="slider-img active" />
+        <img src="shirt2.png" alt="Shirt 2" class="slider-img" />
+        <img src="shirt3.png" alt="Shirt 3" class="slider-img" />
+      </div>
+      <div class="discount-badge">50% OFF</div>
+    </div>
+
+    <!-- Text Area -->
+    <div class="text-area">
+      <h1>Special <span class="highlight">Offer</span> Just for You!</h1>
+      <p>Grab your favorite product at an exclusive discounted price. Limited time only!</p>
+      <button class="shop-btn" onclick="shopNow()">Shop Now</button>
+    </div>
+  </div>
+</section>
+<script>
+  function shopNow() {
+  alert("Redirecting to shop page...");
+  // window.location.href = "shop.html";
+}
+
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slider-img");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Change slide every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Show the first slide initially
+showSlide(currentSlide);
+
+</script>

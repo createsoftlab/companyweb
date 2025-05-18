@@ -1,0 +1,1641 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color:#00204a;
+    --secondary-color: #3d829dae;
+    --sixth-color: rgb(0,0,139);
+    --fourth-color:#253e5fde;
+    --fifth-color:#062b5c;
+    --btn-color: #007bff;
+    --third-color:#ffc107;
+    --background-color: #ddd;
+    --border-color:#d8d8d8;
+    --text-color:#1b1b1b;
+    --bg-color:#fff;
+    --box-shadow:2px 2px 10px 14px rgb(14 55 54 /15%);
+    --accent-color: #8672FF;
+  --base-color: white;
+  --text-color: #2E2B41;
+  --input-color: #F3F0FF;
+  --hover-color: #90e0ef;
+  --active-color: #caf0f8;
+}
+
+body{
+  background-color: var(--bg-color); 
+  overflow-x: hidden;
+}
+img{
+  width: 100%;
+}
+
+section{
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  text-align: center;
+  z-index: 10000;
+}
+.menu-icon-wrapper{
+  
+  position: fixed;
+  margin: 10px;
+  
+  left: 20px;
+  font-size: 24px;
+  z-index: 100001;
+  cursor: pointer; 
+  background: var(--secondary-color);
+  color: var(--bg-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+}
+.menu-icon-wrapper i{
+  
+  font-size: 25px;
+  color: var(--bg-color);
+}
+
+.logo-and-explore-wrapper{
+  width: 30%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  gap: 15px;
+}
+.logo{
+  margin: 0;
+  padding: 5px;
+  
+}
+.logo p{
+  font-family:'Times New Roman', Times, serif;
+  color: var(--bg-color);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.explore{
+  width: 30%;
+  height: 100%;
+  
+  color: var(--bg-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.explore p{
+  margin: 0; /* Remove unwanted margin */
+  padding: 0;
+  
+  font-size: 14px;
+  padding-right: 10px;
+}
+.explore i{
+  font-size: 12px;
+  
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.explore-box-wrapper{
+  position: absolute;
+  top: 100%; /* Position right below .explore */
+  left: 0;
+  background: white;
+  width: 1000px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none; /* Hide by default */
+  z-index: 100;
+  
+ 
+}
+.explore-box-cover{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+/**/
+.explore-menu-wrapper{
+  width: 30% ;
+ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height:30px;
+  padding: 10px;
+  border-right: 1px solid var(--border-color);
+}
+.list1-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.list1-links li{
+  
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+.list1-links li:hover{
+  
+  transform: translateX(10px);
+}
+.list1-links li a{
+  color: var(--text-color);
+  
+  text-decoration: none;
+  
+}
+.list1-links li a:hover{
+  color: var(--btn-color);
+}
+/**/
+.explore-list-wrapper{
+  
+  width: 70%;
+  
+  background: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+}
+.explore-header {
+ 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.explore-header h4{
+  
+  margin: 5px;
+  padding: 5px;
+}
+.explore-header i {
+  font-size: 28px;
+  
+  cursor: pointer;
+  margin: 5px;
+}
+.explore-list {
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: left;
+  padding: 10px;
+  line-height: 15px;
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+}
+.explore-list a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.explore-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.explore-list-item i{
+  font-size: 10px;
+  margin: 5px;
+ 
+}
+.explore-list-item:hover {
+  transform: translateX(10px);
+  font-weight: 600;
+  color: var(--btn-color);
+}
+/**/
+.pagination-for-explore-box{
+  width: 100%;
+
+  position: relative;
+  top: 50px;
+}
+.pagination-for-explore-box .pagination .page-link {
+  font-size: 15px; 
+  font-weight: bold;
+  padding: 10px 14px; 
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  
+
+}
+
+.pagination-for-explore-box .pagination .page-item.active .page-link {
+  background-color: var(--btn-color); 
+  color: white;
+  border-color: var(--btn-color);
+  
+}
+
+.pagination-for-explore-box .pagination .page-item .page-link:hover {
+  background-color: var(--fifth-color);
+  color: white;
+}
+
+.pagination-for-explore-box .pagination .page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.navbar-items{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position: relative;
+  top: -15px;
+  background: linear-gradient(180deg, var(--fifth-color), var(--sixth-color));
+  margin: 15px 0;
+  transition: all 0.3s ease-in-out;
+ 
+  text-align: center;
+  
+}
+/**/
+.contact-of-explore-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact-explore{
+  
+  padding: 10px;
+}
+.contact-explore h4{
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.contact-explore p{
+  font-size: 16px;
+  color: var(--text-color);
+}
+.add-your-business-btn,
+.advertise-with-us-btn{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--fifth-color), var(--btn-color));
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.add-your-business-btn a,
+.advertise-with-us-btn a{
+  color: var(--bg-color);
+}
+.navbar1{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  
+}
+.navbar1 ul{
+  padding: 8px ;
+  color: var(--bg-color);
+  display: flex;
+}
+
+.navbar1 a{
+  text-decoration: none;
+  color: var(--bg-color);
+  margin: 10px;
+}
+
+.navbar1 .btn{
+  width: 120px;
+  height: 40px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  padding: 5px;
+  text-align: center;
+
+} 
+.navbar1 .btn:hover{
+  background-color: #4097f5;
+}
+
+.menu-box{
+  /**/  width: 100%;
+  
+   position: fixed;
+   background: var(--fifth-color)  ;
+   top: 100px;
+   left: -2000px; 
+  height: 100vh;
+  overflow: hidden;
+  padding: 30px ;  
+ transition: left 0.3s ease;
+}
+.close-icon{
+  transition: transform 0.3s ease-in;
+}
+.close-icon i {
+  color: var(--bg-color);
+  font-size: 25px;
+  
+  cursor: pointer;
+  margin-right: 20px;
+  position: absolute;  /* Keep it fixed */
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+
+}
+.close-icon :hover{
+  transform: rotateX('360deg');
+}
+.menu-box-wrapper{
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 180px); 
+  overflow-y: auto; 
+  scrollbar-width: thin; 
+  scrollbar-color: var(--main-color) var(--secondary-color);
+}
+
+.navbar-and-explore-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ 
+  padding: 5px; 
+  overflow-y: auto; /* Always show scrollbar */
+  flex-grow: 1;
+}
+.navbar-wrapper1{
+  width: 100% ;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  flex: 1; 
+  line-height: 30px;
+  padding: 10px;
+  
+}
+.navbar-wrapper1-header {
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+}
+.list-links {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.list-links li{
+  
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+  padding: 8px;
+  transition: all 0.5s ease;
+}
+.list-links li:hover{
+  
+  transform: translateX(10px);
+}
+.list-links li a{
+  color: var(--bg-color);
+  
+  text-decoration: none;
+  
+}
+.list-links li a:hover{
+  color: var(--btn-color);
+}
+/*========================================*/
+.full-body{
+ 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.booking-introduction-cover {
+
+  width: 100%;
+  margin: 0;
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, var(--fifth-color), var(--sixth-color));
+    padding: 60px 10px;
+    gap: 40px;
+   
+
+  }
+  
+  /* LEFT SIDEBAR NAVBAR */
+  .booking-stay-navbar {
+    width: max-content;
+    border-radius: 16px;
+    padding: 30px 20px;
+   
+    height: fit-content;
+    position: relative;
+    top: 0;
+  
+  }
+  
+  .stay-list-cover {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+ 
+    gap: 20px;
+  }
+  
+  .stay-list-cover li a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+  }
+  
+  .stay-list-cover li a:hover {
+    background-color: var(--hover-color);
+    color: #000;
+    transform: translateX(5px);
+  }
+ .booking-introduction-cover .title-and-description-cover{
+    width: 70%;
+    background-color: transparent;
+    color: var(--bg-color);
+    padding: 20px;
+    margin-top: 30px;
+
+ }
+ .booking-introduction-cover .title-and-description-cover h3{
+    font-size: 2.5rem;
+  margin-bottom: 30px;
+ }
+ .booking-introduction-cover .title-and-description-cover p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .jobs-search-container {
+    padding: 20px 0;
+    position: relative;
+  
+    
+  }
+  
+  .jobs-search-wrapper {
+   
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+  }
+  
+  .search-item {
+    flex: 1 1 200px;
+    min-width: 150px;
+  }
+  .search-item1 {
+    flex: 1 1 150px;
+    max-width: 200px;
+  }
+  .search-item1 input{
+    font-size: 14px;
+   
+  }
+  .search-item1 i{
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+  }
+  .guest-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  
+  .custom-input,
+  .custom-select {
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .custom-input:focus,
+  .custom-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+  }
+  
+  .search-btn {
+    width: 10%;
+    flex: 0 0 60px;
+    height: 48px;
+  }
+  
+  .search-btn button {
+    height: 100%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ /*  @media (max-width: 576px) {
+    .jobs-search-wrapper {
+     
+      gap: 0px;
+    }
+  
+    .search-btn {
+      width: 100%;
+    }
+  } */
+/**/
+.trending-destinations{
+
+  margin: 0;
+  position: relative;
+  top: 30px;
+}
+.gallery-img {
+ 
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/**/
+  /* =========================start add slider =======================*/
+/* Optional: Styling for smoother carousel experience */
+.offer-description-container{
+
+  margin: 0;
+  width: 100%;
+}
+/* Carousel container */
+.custom-carousel {
+ 
+  height: 200px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+
+/* Each slide container */
+.carousel-item {
+  height: 200px;
+}
+
+/* Image styling */
+.carousel-img {
+  height: 140px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text block */
+.carousel-text {
+  flex: 1;
+  color: #333;
+}
+
+/* Carousel indicators (dots) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 5px;
+  justify-content: center;
+  margin: 0;
+  
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+  opacity: 0.6;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 6px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .d-flex {
+   
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-img {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+
+  
+   /* =========================end add slider =======================*/
+    /* ========================= start image gallery =======================*/
+    .explore-lanka{
+      width: 100%;
+     
+    }
+   .explore-lanka .scroll-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    padding: 20px 60px; /* Space for arrows */
+    overflow-x: auto;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+   
+      }
+      .explore-lanka .scroll-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+   .explore-lanka   .travel-destinations-cover {
+        width: 200px;
+        flex-shrink: 0;
+      
+      }
+      
+   .explore-lanka   .travel-destinations-cover img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+       
+      }
+      
+    .explore-lanka  .slider-arrow {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #f8f9fa;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      }
+      
+    .explore-lanka  .slider-arrow:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+     /* =========================end image gallery =======================*/
+/* =========================start image gallery =======================*/
+
+ .browse-by-property-type-of-location{
+  width: 100%;
+ 
+ }
+.browse-by-property-type-of-location .scroll-wrapper {
+  width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    padding: 20px 60px; /* Space for arrows */
+    overflow-x: auto;
+    position: relative;
+   
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+   
+  }
+  
+  .browse-by-property-type-of-location .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .browse-by-property-type-of-location .travel-destinations-cover {
+    width: 250px;
+    flex-shrink: 0;
+    
+  }
+  
+  .browse-by-property-type-of-location .travel-destinations-cover img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .browse-by-property-type-of-location .slider-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+
+  }
+  
+  .browse-by-property-type-of-location .slider-arrow:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  .browse-by-property-type-of-location .slider-left {
+    left: 10px;
+  }
+  
+  .browse-by-property-type-of-location .slider-right {
+    right: 10px;
+  } 
+  
+/* ========================= start image gallery =======================*/
+.quick-and-easy-trip-planner{
+  width: 100%;
+
+  margin: 0;
+}
+.quick-and-easy-trip-planner-navbar {
+  border-radius: 16px;
+  padding: 10px ;
+  height: fit-content;
+  position: relative;
+  top: 0;
+ 
+}
+
+.quick-and-easy-trip-planner-list-cover {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+ 
+  gap: 20px;
+}
+
+.quick-and-easy-trip-planner-list-cover li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.quick-and-easy-trip-planner-list-cover li a:hover {
+  background-color: var(--background-color);
+  
+}
+.quick-and-easy-trip-planner .scroll-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  padding: 20px 60px; /* Space for arrows */
+ 
+  position: relative;
+  
+  
+  
+  }
+  .quick-and-easy-trip-planner .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .quick-and-easy-trip-planner .travel-destinations-cover {
+    width: 250px;
+    height: 300px;
+    flex-shrink: 0;
+   
+
+  }
+  
+  .quick-and-easy-trip-planner .travel-destinations-cover img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  .quick-and-easy-trip-planner .travel-destinations-cover h6{
+    position: relative;
+    bottom: 40px;
+    background-color: #000;
+    color: var(--bg-color);
+    padding: 10px;
+  }
+  .quick-and-easy-trip-planner .slider-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .quick-and-easy-trip-planner .slider-arrow:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .quick-and-easy-trip-planner .slider-left {
+    left: 10px;
+  }
+  
+  .quick-and-easy-trip-planner .slider-right {
+    right: 10px;
+  } 
+/* ========================= end image gallery =======================*/
+/* ========================= start large and small image gallery =======================*/
+.popular-attractions-in-kandy{
+
+  width: 100%;
+  margin: 0;
+}
+.popular-attractions-in-kandy .image-gallery{
+  gap: 1.5rem;
+}
+.popular-attractions-in-kandy .image-gallery .gallery-wrapper {
+  align-items: center;
+}
+.popular-attractions-in-kandy .main-wrapper {
+  width: 60%;
+  height: 420px;
+  display: flex;
+  align-items: flex-start;
+
+  margin: 0;
+}
+.popular-attractions-in-kandy .main-image-container {
+  width: 80%;
+height: 100%;
+  position: relative;
+
+}
+
+.popular-attractions-in-kandy .main-image-container img {
+  width: 100%;
+  height: 100%;
+ 
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  max-height: 500px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Arrows */
+.popular-attractions-in-kandy .image-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.popular-attractions-in-kandy .image-nav-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.popular-attractions-in-kandy .left-btn {
+  left: 10px;
+}
+
+.popular-attractions-in-kandy .right-btn {
+  right: 10px;
+}
+
+/* Horizontal Thumbnails */
+
+.popular-attractions-in-kandy .thumbnail-slider-vertical,
+.popular-attractions-in-kandy .thumbnail-slider-horizontal {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.popular-attractions-in-kandy .thumbnail-slider-vertical::-webkit-scrollbar,
+.popular-attractions-in-kandy .thumbnail-slider-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Vertical Thumbnails */
+.popular-attractions-in-kandy .thumbnail-slider-vertical {
+  max-height: 420px;
+  margin: 0;
+  overflow-y: auto;
+  
+}
+
+
+/* Thumbnails shared style */
+.popular-attractions-in-kandy .thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+  border: 2px solid transparent;
+ 
+}
+.popular-attractions-in-kandy .thumbnail:hover {
+  transform: scale(1.05);
+}
+.popular-attractions-in-kandy .thumbnail.active {
+  border: 2px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* =========================end large and small image gallery =======================*/
+/* ========================= start image gallery =======================*/
+.deals-for-the-weekend{
+ 
+  width: 100%;
+  margin: 0;
+}
+.deals-for-the-weekend-cover {
+  width: 250px;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.deals-for-the-weekend-image-cover {
+  height: 50%;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.deals-for-the-weekend-image-cover img {
+  height: 100%;
+  width: 100%;
+  
+  object-fit: cover;
+}
+.deals-for-the-weekend-description{
+  font-size: 14px;
+}
+.deal-label {
+  background-color: var(--fifth-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.deals-for-the-weekend .last-desc p {
+  margin-bottom: 0;
+}
+.deals-for-the-weekend .scroll-wrapper {
+
+  padding-bottom: 1rem;
+}
+.deals-for-the-weekend .scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.deals-for-the-weekend .slider-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.deals-for-the-weekend .slider-arrow:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.deals-for-the-weekend .slider-left {
+  left: 10px;
+}
+
+.deals-for-the-weekend .slider-right {
+  right: 10px;
+} 
+/* =========================end image gallery =======================*/
+.sri-lanka-stay-sample-container{
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+.list-text {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list-text li {
+  background-color: #f8f9fa;
+  margin-bottom: 4px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  line-height: 1.2; /* Tighter spacing */
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.list-text li:hover {
+  background-color: #e9ecef;
+}
+
+.controls {
+  display: flex;
+
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.show-more-btn, .show-less-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.show-more-btn:hover, .show-less-btn:hover {
+  color: #0056b3;
+}
+
+/* =========================end image gallery =======================*/
+
+.footer-wrapper{
+    
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  width: 100%;
+}
+.footer-cover{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.email-information{
+  width: 100%;
+  height: 70px;
+  
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed var(--fifth-color);
+}
+.all-information-cover{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.first-line-of-information-cover{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr)) ;
+  gap: 10px;
+}
+.second-line-of-information-cover{
+  border-top: 1px dashed var(--fifth-color);
+  padding: 10px;
+}
+
+.top-category,
+.trending-category,
+.help-support{
+  width: 100%;
+  padding: 10px;
+}
+.popular-tags{  
+  padding: 10px;
+}
+
+.top-category h6,
+.trending-category h6,
+.help-support h6,
+.popular-tags h6{
+  text-transform: capitalize;
+}
+
+.top-category-list .list ul,
+.trending-category-list .list ul,
+.help-support-list .list ul
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0;
+  line-height: 25px;
+  font-size: 14px;
+}
+.popular-tags-list .list ul{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 0;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.list ul li a{
+  text-decoration: none;
+  color: var(--bg-color);
+}
+
+.list ul li a:hover{
+  text-decoration: underline;
+  color: var(--btn-color);
+}
+.contact-details-cover{
+  width: 100%;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr)) ;
+  gap: 15px;
+}
+.contact-details-cover h6{
+  margin-bottom: 20px;
+}
+.contact-information1,
+.download-information,
+.social-media-details{
+  margin: 20px;
+  font-size: 14px;
+}
+.contact-information1 h6,
+.download-information h6,
+.social-media-details h6{
+  margin-bottom: 30px;
+}
+.download-information ul{
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+.social-media-details ul{
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+.download-information ul li,
+.social-media-details ul li{
+  margin: 7px;
+}
+.countries{
+  border-top: 1px dashed var(--btn-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.countries ul{
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+}
+.countries ul li{
+  margin: 10px;
+  padding-right: 5px;
+  border-right: 1px dashed var(--btn-color);
+  font-size: 13px;
+}
+
+
+@media(min-width:1024px){
+   
+  .menu-box{
+      left: -2000px;   
+  }
+  
+
+}
+
+
+@media(max-width:1024px){
+  .menu-box{
+      left: -2000px;    
+  }
+  
+  
+  
+}
+@media(max-width:991px){
+  .navbar2 ul{
+      gap: 15px;
+  }
+  .navbar2 ul li a{
+      margin: 30px;
+  }
+  .menu-icon-wrapper{
+      display: initial;
+  }
+  .navbar1 ul,
+  .navbar1 a{
+      display: none;
+  }
+  .navbar-items{
+      display: none;
+  }
+  .explore{
+      display: none;
+  }
+  header{   
+      height: 100px ;
+  }
+
+  .logo-and-explore-wrapper{
+      width: 100%;  
+  }
+  
+  .menu-box{
+        width: 50%;        
+        
+  }
+  .menu-box.active{
+      left: 0;
+      display: block;
+  }
+  .close-icon i {
+      font-size: 32px;
+  }
+  
+  /*===========*/
+ 
+    
+  
+  
+  .jobs-search-wrapper {
+    gap: 10px;
+    padding: 12px;
+    width: 97%;
+  }
+  .search-item1 input{
+    font-size: 12px;
+   
+  }
+  .search-item1 i{
+    font-size: 12px;
+  }
+  .search-item1 #guest-Summary{
+    font-size: 10px;
+  }
+  
+  .popular-attractions-in-kandy .main-wrapper {
+    width: 95%;
+    height: 420px;
+    
+  
+    margin: 0;
+  }
+  .popular-attractions-in-kandy .main-image-container {
+    width: 78%;
+  
+  }
+  .stay-list-cover li a {
+    font-size: 1rem;
+    padding: 10px; 
+  }
+  
+  .quick-and-easy-trip-planner-navbar {
+    padding: 20px 10px;
+  }
+  
+  .quick-and-easy-trip-planner-list-cover {
+   
+    gap: 10px;
+  }
+  
+  .quick-and-easy-trip-planner-list-cover li a {
+    padding: 10px ;
+    
+  }
+  
+    
+
+  
+  
+}
+@media(max-width:768px){
+  .logo p{
+      padding: 0px;
+  }
+  .navbar1 ul{
+      padding: 3px ;
+  }
+
+  .top-category-list .list ul,
+  .trending-category-list .list ul,
+  .help-support-list .list ul{
+      grid-template-columns: 1fr; 
+  }
+  .popular-tags-list .list ul{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .popular-company-list-cover{
+      flex-direction: column;
+  }
+ 
+  
+  .menu-box{
+       width: 75%;      
+  }
+
+ /**/
+ .jobs-search-container {
+  position: relative;
+  top: 60px;
+  margin-bottom: 50px;
+}
+
+.jobs-search-wrapper {
+  
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+  justify-content: center;
+  width: 95%;
+}
+
+.search-item {
+  width: 100%;
+  flex: 1 1 10px;
+  max-width: 500px;
+}
+.search-item1 {
+  width: 100%;
+  flex: 1 1 10px;
+  max-width: 500px ;
+}
+.search-item1 input{
+  font-size: 12px;
+ 
+}
+.search-item1 i{
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+}
+.search-btn {
+  width: 100%;
+ 
+}
+ 
+.popular-attractions-in-kandy .main-wrapper {
+  width: 95%;
+  height: 420px;
+  
+
+  margin: 0;
+}
+.popular-attractions-in-kandy .main-image-container {
+  width: 78%;
+
+}
+.stay-list-cover li a {
+  font-size: 1rem;
+  padding: 5px; 
+}
+
+.booking-introduction-cover .title-and-description-cover{
+  width: 100%;
+  padding: 20px;
+ 
+}
+  
+}
+
+@media(max-width:480px){
+  .logo p{
+      padding: 0px;
+  }
+  .navbar1 ul{
+      padding: 3px ;
+  }
+  .menu-box{
+       width: 100%;  
+  }
+  .close-icon i {
+      
+      font-size: 35px;
+     
+  }
+  .navbar-wrapper1-header h5,
+  .explore-list-header h5{
+      font-size: 25px;
+  }
+  .list-links a,
+  .list2-links li a,
+  .explore-menu-list a { 
+      line-height: 30px;
+      font-size: 20px;
+      
+  }
+  /*=========================================*/
+  .popular-tags-list .list ul{
+      grid-template-columns: 1fr;
+  }
+  .all-information-cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .first-line-of-information-cover,
+  .second-line-of-information-cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      padding: 5px;
+  }
+  
+  .top-category-list .list ul,
+  .trending-category-list .list ul,
+  .help-support-list .list ul {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  
+  .popular-tags-list .list ul {
+      grid-template-columns: repeat(2, 1fr); /* Reduce columns */
+  }
+/*==========================================*/
+  .countries ul{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(5rem,auto));      
+  }
+/*=====================================*/
+  .category-header {
+      grid-template-columns: 1fr; 
+  }
+  .category-title{
+      top: 70%;
+      padding-bottom: 10px;
+  }
+/*----------------------------------*/
+ 
+ 
+  /*======================================*/
+  .top-category,
+  .trending-category,
+  .help-support{
+      padding: 10px;
+
+  } 
+
+  .top-category-list .list ul,
+  .trending-category-list .list ul,
+  .help-support-list .list ul
+  {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+      padding: 0;
+      line-height: 25px;
+      font-size: 14px;
+  }
+  
+  .time-duration-posted-job{
+      flex-direction: column;
+      gap: 2px;
+   
+    }
+  
+    .stay-list-cover li a {
+      font-size: 0.7rem;
+      padding: 3px; 
+    }
+    .popular-attractions-in-kandy .thumbnail {
+      width: 70px;
+      height: 70px;
+      
+    }
+
+}

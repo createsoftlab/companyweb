@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company-details</title>
+</head>
+    
+    <link rel="stylesheet" href="style-company-deatails.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<body>
+    <header class="header">
+        <div class="menu-icon-wrapper">
+            <i class='bx bx-menu' id="menu-icon"></i>
+        </div>
+        
+        <div class="logo-and-explore-wrapper">
+            <div class="logo">
+                <p>CREATE</p>
+            </div>
+           
+            
+        </div>
+        
+        <div class="navbar1 text-nowrap">
+            <ul class="list-links1">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="products.html">Product</a></li>
+                    <li><a href="events.html">Event</a></li>
+                    <li><a href="advertise.html">Advertise</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>      
+            </ul>
+            <a href="#" class="btn">Add Business</a>
+            <a href="booking-home.html" class="btn">Booking</a>
+        </div>
+
+
+        <div class="menu-box">
+            <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>           
+            <div class="menu-box-wrapper">
+                <div class="navbar-and-explore-box">
+                    <div class="navbar-wrapper1">
+                        <div class="navbar-list-menu-wrapper1">
+                            <div class="navbar-wrapper1-header">
+                                <h5>Menu</h5>                                 
+                            </div>
+                            <ul class="list-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="blog.html">Blogs</a></li>
+                                <li><a href="jobs.html">jobs</a></li>
+                                <li><a href="products.html">Product</a></li>
+                                <li><a href="events.html">Event</a></li>
+                                <li><a href="services.html">Service</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="create-blog-post.html">Create blog post</a></li>
+                                <li><a href="advertise.html">Advertise</a></li>
+                                <li><a href="job-deatails.html">job Details</a></li>                          
+                                <li><a href="#">Sign in</a></li>
+                                <li><a href="#">Sign out</a></li>
+                                <li><a href="#">Create Account</a></li>
+                                <li><button><a href="#">Add Business</a></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="navbar-wrapper2">
+                        <div class="navbar-list-menu-wrapper2">
+                            <ul class="list2-links">
+                                <li><a href="#">All Services</a></li>
+                                <li><a href="#">Classified ADs</a></li>
+                                <li><a href="#">Service Experts</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Explore Travels</a></li>
+                                <li><a href="#">News & Magazines</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Blogs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="explore-box">
+                        <div class="explore-list-menu-wrapper">
+                            <div class="explore-list-header">
+                                <h5>All Categories</h5>                                 
+                            </div>
+                            <ul class="explore-menu-list">
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                                <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div> -->
+                     
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+        
+        <section class="image-gallery">
+            <h3 class="text-white m-0 ">Company details</h3>
+            <nav class="breadcrumb custom-breadcrumb m-0">
+                <a href="index.html">Home</a>
+                <span>&gt;</span>  <!-- > symbol for the separator -->
+                
+                <span class="current">Details</span>  <!-- Current page -->
+            </nav>
+            <!-- Slideshow container -->
+                <div class="gallery-container" id="gallery">
+                </div>
+            
+        
+  <br>
+  
+  
+        </section>
+       <section class="company-details-wrapper">
+        <div class="company-details-cover">
+            <div class="company-details-left-container">
+                
+                <div class="about-company">
+                    <h4>About <p>company</p></h4><hr>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+                <div class="services-offered">
+                    <h4>services <p>offered</p></h4><hr>
+                    <div class="images-cover">
+                        <div class="image-cover">
+                            <img src="images/picture1.jpeg" alt="">
+                            <p class="text-image">land</p>
+                        </div>
+                        <div class="image-cover">
+                            <img src="images/picture2.jpg" alt="">
+                            <p class="text-image">land</p>
+                        </div>
+                        <div class="image-cover">
+                            <img src="images/picture3.jpeg" alt="">
+                            <p class="text-image">land</p>
+                        </div>
+                        <div class="image-cover">
+                            <img src="images/picture4.jpeg" alt="">
+                            <p class="text-image">land</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-areas">
+                    <h4>Service <p>areas</p></h4>
+                    <hr>
+                    <div class="areas-cover">
+                        <ul>
+                            <li>Alexander City</li>
+                            <li>Selma</li>
+                            <li>Montgomery</li>
+                            <li>Decatur</li>
+                            <li>Talladega</li>
+                            <li>Avondale</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="products">
+                    <h4>products</h4>
+                    <hr>
+                    <button class="slider-arrow slider-left"><i class='bx bx-chevron-left'></i></button>
+                    
+                    <div class="product-gallery-wrapper">
+                        <div class="product-gallery-slider">
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture1.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture3.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture4.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <h5>shoes for men</h5>
+                                    <p><a href="#">Rs.2000/-</a> 20% off</p>
+                                    <div class="buy-now-button-for-hover">
+                                        <a href="products-details.html" class="btn">Buy Now</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>                           
+                                    
+                    </div>
+                    <button class="slider-arrow slider-right"><i class='bx bx-chevron-right'></i></button>
+                    <a href="products.html" class="btn btn-see-more mt-4 px-4 py-3 w-50 fw-bold">See more</a>
+                </div>
+                <div class="events">
+                    <h4>Events</h4><hr>
+                    
+                    <div class="events-gallery-wrapper">
+                        <div class="events-gallery-slider">
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture1.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture3.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture4.jpeg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="events-gallery-cover">
+                                <div class="image-cover">
+                                    <img src="images/picture2.jpg" alt="">
+                                </div>
+                                <div class="description-cover">
+                                    <div class="first-cover">
+                                        <div class="month">
+                                            <p><a href="">28</a></p>
+                                            <p>Oct </p>
+                                        </div>   
+                                        <div class="title">
+                                            <h4>Title</h4> 
+                                        </div> 
+                                    </div>     
+
+                                    <div class="more-details-link">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde similique sit hic illum atque recusandae nemo earum quibusdam assumenda eos.</p>
+                                        <a href="events.html" class="btn">More details <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>      
+                        <div class="pagination-container-for-events">
+                            <button class="first-page" disabled><i class="fa-solid fa-angles-left"></i></button>
+                            <button class="previous-page" disabled><i class="fa-solid fa-angle-left"></i></button>
+                            <div class="pagination-numbers"></div>
+                            <button class="next-page"><i class="fa-solid fa-angle-right"></i></button>
+                            <button class="last-page"><i class="fa-solid fa-angles-right"></i></button>
+                            
+                        </div>                      
+                                    
+                    </div>
+                    
+                 
+                </div>
+                <div class="special-offers">
+                    <h4>special <p>offers</p></h4><hr>
+                    <div class="offers-description">
+                        <div class="image-container">
+                            <img src="images/picture2.jpg" alt="">
+                        </div>
+                        <div class="description-container">
+                            <h4>50% offer only today</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, cum.</p>
+                            <div class="description-buttons">
+                                <a href="#" class="view btn">view more</a>
+                                <a href="#" class="enquiry btn">send enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="company-details-right-container">
+                <div class="contact-information-wrapper">
+                    <div class="image-cover">
+                        <img src="images/image4.jpeg" alt="">
+                    </div>
+                    <div class="contact-description">
+                        <h3>Blues sky real estate</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i>No:2, 4th Avenue, Newyork, USA, Near to Airport</li>
+                            <li><i class="fa-solid fa-phone"></i>078945612301</li>
+                            <li><i class="fa-solid fa-envelope"></i></i>joneylaptops@gmail.com</li>
+                            <li><i class="fa-solid fa-globe"></i>www.noahreal .com</li>
+                        </ul>
+                        <div class="all-button-links">
+                            <div class="call-now-btn">
+                              <i class="fa-solid fa-phone"></i>
+                              <a href="#" class="btn">Call Now</a>
+                            </div>
+                            <div class="get-quote-btn">
+                              <i class="fa-solid fa-message"></i>
+                              <a href="#" class="btn" id="openFormBtn">Get Quote</a>
+                            </div>
+                          </div>
+                          
+                          <!-- Popup Form -->
+                          <div id="popupForm" class="popup-form">
+                            <div class="popup-content">
+                              <span id="closeFormBtn" class="close-btn fs-3">&times;</span>
+                              <h3>Get a Quote</h3>
+                              <form>
+                                <div class="mb-3">
+                                  <input type="text" placeholder="Your Name" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                  <input type="email" placeholder="Your Email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                  <textarea placeholder="Your Message" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                              </form>
+                            </div>
+                          </div> 
+                          <!-- <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                              <div class="modal__container" role="dialog" aria-modal="true">
+                                <header class="modal__header">
+                                  <h2 class="modal__title">Get a Quote</h2>
+                                  <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                                </header>
+                                <main class="modal__content">
+                                  <form>
+                                    <input type="text" placeholder="Your Name" class="form-control mb-2">
+                                    <input type="email" placeholder="Your Email" class="form-control mb-2">
+                                    <textarea placeholder="Your Message" class="form-control mb-2"></textarea>
+                                  </form>
+                                </main>
+                                <footer class="modal__footer">
+                                  <button class="btn btn-primary">Submit</button>
+                                </footer>
+                              </div>
+                            </div>
+                          </div> -->
+                          
+                          
+                          
+                        <div class="social-links">
+                            <p><i class='bx bxl-whatsapp'></i>Whatsapp</p>
+                            <p><i class='bx bxs-share-alt' ></i>Share </p>
+                            <p><i class='bx bxs-like'></i> Like</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="company-info-wrapper">
+                    <h4>company <p>Info</p></h4><hr>
+                    <div class="drop-down-time-duration">
+                        <p>Working hours<i id="icon" class="fa-solid fa-chevron-down"></i></p>
+                        <ul>
+                            <li><p>Sunday</p><span>closed</span></li>
+                            <li><p>Monday</p><span>8.00am - 5.30pm</span></li>
+                            <li><p>Tuesday</p><span>8.00am - 5.30pm</span></li>
+                            <li><p>Wednesday</p><span>8.00am - 5.30pm</span></li>
+                            <li><p>Thursday</p><span>8.00am - 5.30pm</span></li>
+                            <li><p>Friday</p><span>8.00am - 5.30pm</span></li>
+                            <li><p>Saturday</p><span>closed</span></li>
+                        </ul>
+                    </div>
+                    <ul class="company-info-description-table">
+                        <li><p>Villas available</p><span>Yes</span>  </li>
+                        <li><p>Plots Available</p><span>Yes</span></li>
+                        <li><p>Flats available</p><span>Yes</span></li>
+                        <li><p>Experience</p><span>15 years</span></li>
+                        <li><p>Parking</p><span>Yes</span></li>
+                        <li><p>WhatsApp</p><span>65432145</span></li>
+                        <li><p>Online booking</p><span>Yes</span></li>
+                    </ul>
+                </div>
+                <div class="listing-created-by">
+                    <h4>listing <p>created by</p></h4><hr>
+                    <div class="listing-created-person">
+                        <div class="listing-created-person-cover">
+                            <img src="images/image5.jpeg" alt="">
+                            <div class="listing-created-person-description">
+                                <p class="person-name">john smith</p>
+                                <p class="person-info">Member since 2017</p>
+                            </div>       
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="business-profile">
+                    <h4>Business <p>profile</p></h4><hr>
+                    <div class="business-profile-person">
+                        <div class="business-profile-person-cover">
+                            <img src="images/image4.jpeg" alt="">
+                            <div class="business-profile-person-description">
+                                <p class="company-site-name">Digitalx</p>
+                                <p class="company-site-info">28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="company-details-add-section2">
+                    <div class="company-details-add-section-wrapper">
+                        <img src="images/background.jpg" alt="">
+                    </div>
+                </div>
+                <div class="ad-video">
+                    <iframe width="600" height="350" src="https://www.youtube.com/embed/w9ehb4tkxfs" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- <div class="review-section-for-mobile">
+                    <div class="header-title-for-review">
+                        <p>Login and write your review</p>
+                    </div>
+                    <div class="header-title-for-review-form">
+                        <div class="review-container">
+                            <h2>Leave a Review</h2>
+                    
+                            <!-- Star Rating 
+                            <div class="star-rating">
+                                <span class="star" data-value="5">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="1">★</span>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" value="0">
+                    
+                            <!-- Form Fields 
+                            <form id="reviewForm">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                    
+                                <label for="review">Write Your Review:</label>
+                                <textarea id="review" name="review" rows="4" required></textarea>
+                    
+                                <button type="submit">Submit Review</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-title-for-review">
+                        <p>Be the First One To Review This Listing!!!</p>
+                    </div>
+                    <div class="add-section">
+                        <img src="images/image1.jpg" alt="">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        
+        <div class="last-full-section-cover">
+            <div class="our-location">
+                <div class="location-header">
+                    <h4>Our <span>Location</span></h4>
+                    <hr>
+                </div>
+                <div class="location-map">
+                    <div class="embed-map-responsive">
+                        <div class="embed-map-container">
+                            <iframe 
+                                class="embed-map-frame"
+                                frameborder="0"
+                                scrolling="no"
+                                marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com/maps?width=600&height=300&hl=en&q=Digitalx%20Lanka&t=&z=16&ie=UTF8&iwloc=B&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="share-button">
+                <a href="#"><i class='bx bx-share-alt'></i> share</a>
+            </div>
+            <div class="review-section-for-desktop">
+                <div class="header-title-for-review">
+                    <p>Login and write your review</p>
+                </div>
+                <div class="header-title-for-review-form">
+                    <div class="review-container">
+                        <h2>Leave a Review</h2>
+                
+                        <!-- Star Rating -->
+                        <div class="star-rating">
+                            <span class="star" data-value="5">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="1">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                
+                        <!-- Form Fields -->
+                        <form id="reviewForm">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                
+                            <label for="review">Write Your Review:</label>
+                            <textarea id="review" name="review" rows="4" required></textarea>
+                
+                            <button type="submit">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-title-for-review">
+                    <p>Be the First One To Review This Listing!!!</p>
+                </div>
+                <div class="add-section">
+                    <img src="images/image1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+       </section>
+        <section class="before-footer-section">
+
+        </section>
+         <footer class="footer-wrapper">
+            <div class="footer-cover">
+                <div class="email-information">
+                    <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+                </div>
+                <div class="all-information-cover">
+                    <div class="first-line-of-information-cover">
+                        <div class="top-category">
+                            <h6>Top Category</h6>
+                            <div class="top-category-list">
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">Technology</a></li>
+                                        <li><a href="#">Spa and facial</a></li>
+                                        <li><a href="#">Real Estate</a></li>
+                                        <li><a href="#">Sports</a></li> 
+                                        <li><a href="#">Education</a></li>
+                                        <li><a href="#">Electricals</a></li>
+                                        <li><a href="#">Automobiles</a></li>
+                                        <li><a href="#">Transportation</a></li>
+                                    </ul>
+                                </div>
+                            </div>                  
+                        </div>
+                        <div class="trending-category">
+                            <h6>Trending Category</h6>
+                            <div class="trending-category-list">
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">Hospitals</a></li>
+                                        <li><a href="#">Restuarants</a></li>
+                                        <li><a href="#">Real Estate</a></li>
+                                        <li><a href="#">Sports</a></li>
+                                        <li><a href="#">Education</a></li>
+                                        <li><a href="#">Electricals</a></li>
+                                        <li><a href="#">Automobiles</a></li>
+                                        <li><a href="#">Transportation</a></li>                  
+                                    </ul>
+                                </div>
+                            </div>                   
+                        </div>
+                        <div class="help-support">
+                            <h6>Help & Support</h6>
+                            <div class="help-support-list">
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Feedback</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms of use</a></li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="second-line-of-information-cover">
+                        <div class="popular-tags">
+                            <h6>popular tags</h6>
+                            <div class="popular-tags-list">
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">Schools in new york</a></li>
+                                        <li><a href="#">Real estate in Chennai</a></li>
+                                        <li><a href="#">Flat for rent in Melborn</a></li>
+                                        <li><a href="#">Real Estate in Illunious</a></li>
+                                        <li><a href="#">Enents in Thailand</a></li>
+                                        <li><a href="#">Schools in new york</a></li>
+                                        <li><a href="#">Schools in new york</a></li>
+                                        <li><a href="#">Real estate in Chennai</a></li>
+                                        <li><a href="#">Flat for rent in Melborn</a></li>
+                                        <li><a href="#">Real Estate in Illunious</a></li>
+                                        <li><a href="#">Enents in Thailand</a></li>
+                                        <li><a href="#">Schools in new york</a></li>
+                                        <li><a href="#">Schools in new york</a></li>
+                                        <li><a href="#">Real estate in Chennai</a></li>
+                                        <li><a href="#">Flat for rent in Melborn</a></li>
+                                        <li><a href="#">Real Estate in Illunious</a></li>
+                                        <li><a href="#">Enents in Thailand</a></li>
+                                        <li><a href="#">Schools in new york</a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="contact-details-cover">
+                    <div class="contact-information1">
+                        <h6>Get in touch</h6>
+                        <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                        <p>Phone: +01 5426 24400</p>
+                        <p>Email: rn34@gmail.com</p>
+                    </div>
+                    <div class="download-information">
+                        <h6>Download our free Mobile Apps</h6>
+                            <ul>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                            </ul>
+                    </div>           
+                    <div class="social-media-details">
+                        <h6>social media</h6>
+                            <ul>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                                <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                            </ul>
+                    </div>                                                           
+                </div>
+    
+                <div class="countries">
+                    <ul>
+                        <li>Australia</li>
+                        <li>UK</li>
+                        <li>India</li>
+                        <li>Germany</li>
+                        <li>China</li>
+                        <li>France</li>
+                    </ul>
+                    
+                </div>
+                <div class="footer-last">
+                    <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+                </div>
+                
+            </div>
+        </footer>  
+        
+        <!-- Add this in your <head> -->
+<!-- Add in your <head> -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+
+        <script src="popup-model.js"></script>
+        <script src="pagination.js"></script>
+        <script src="script.js"></script>
+        <script src="reviews.js"></script>
+        <script src="slider-move-script.js"></script>
+        <script src="image-gallery-script.js"></script>
+</body>
+</html>

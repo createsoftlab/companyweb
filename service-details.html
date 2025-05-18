@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Details</title>
+  <link rel="stylesheet" href="service-details.css">
+  <link rel="stylesheet" href="style-home-footer.css">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.details-hero {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('images/service1.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.details-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.details-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.details-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.details-hero-content p {
+  font-size: 1.2rem;
+}
+
+.service-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  align-items: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1b4d89;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-text li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info-text li i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.cta-section {
+  text-align: center;
+  background-color: #1b4d89;
+  padding: 50px 20px;
+  color: white;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #1b4d89;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #f0f0f0;
+}
+.tools-section, .benefits-section, .testimonial-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tools-icons i {
+  font-size: 2.5rem;
+  margin: 10px;
+  color: #1b4d89;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.benefits-list li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonial {
+  background: #f1f6fb;
+  border-left: 5px solid #1b4d89;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+  font-weight: bold;
+}
+
+.cta-section {
+  text-align: center;
+  background-color: #1b4d89;
+  padding: 50px 20px;
+  color: white;
+ 
+}
+.info-text p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #1b4d89;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.service-gallery {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f7fafd;
+}
+
+.service-gallery h2 {
+  font-size: 2rem;
+  color: #1b4d89;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon-wrapper">
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </div>
+    
+    <div class="logo-and-explore-wrapper">
+        <div class="logo">
+            <p>CREATE</p>
+        </div>
+       
+        
+    </div>
+    
+    <div class="navbar1 text-nowrap">
+        <ul class="list-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>      
+        </ul>
+        <a href="#" class="btn">Add Business</a>
+        <a href="booking-home.html" class="btn">Booking</a>
+    </div>
+
+
+    <div class="menu-box">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>           
+        <div class="menu-box-wrapper">
+            <div class="navbar-and-explore-box">
+                <div class="navbar-wrapper1">
+                    <div class="navbar-list-menu-wrapper1">
+                        <div class="navbar-wrapper1-header">
+                            <h5>Menu</h5>                                 
+                        </div>
+                        <ul class="list-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="jobs.html">jobs</a></li>
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="events.html">Event</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="create-blog-post.html">Create blog post</a></li>
+                            <li><a href="advertise.html">Advertise</a></li>
+                            <li><a href="job-deatails.html">job Details</a></li>                          
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Sign out</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><button><a href="#">Add Business</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="navbar-wrapper2">
+                    <div class="navbar-list-menu-wrapper2">
+                        <ul class="list2-links">
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Classified ADs</a></li>
+                            <li><a href="#">Service Experts</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Explore Travels</a></li>
+                            <li><a href="#">News & Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="explore-box">
+                    <div class="explore-list-menu-wrapper">
+                        <div class="explore-list-header">
+                            <h5>All Categories</h5>                                 
+                        </div>
+                        <ul class="explore-menu-list">
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                            <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div> -->
+                 
+                
+            </div>
+        </div>
+    </div>
+</header>
+  <section class="details-hero">
+    <div class="overlay"></div>
+    <div class="details-hero-content">
+      <h1>Web Development</h1>
+      <p>We build responsive, fast, and modern websites using cutting-edge technologies.</p>
+    </div>
+  </section>
+
+  <section class="service-info">
+    <div class="info-image">
+      <img src="images/service1.jpg" alt="Web Development">
+    </div>
+    <div class="info-text">
+        <h2><i class="fas fa-code"></i> What We Offer</h2>
+        <p>
+          We specialize in creating modern, scalable, and high-performance web applications tailored to your business goals.
+          Our team ensures every project delivers a seamless user experience across devices, leverages cutting-edge technologies,
+          and follows best practices in coding and SEO to help your brand succeed online.
+
+          <ul>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design for all devices</li>
+            <li><i class="fas fa-laptop-code"></i> Built with React, Vue, or Angular</li>
+            <li><i class="fas fa-search"></i> SEO Best Practices</li>
+            <li><i class="fas fa-rocket"></i> Fast loading and performance optimization</li>
+          </ul>
+        </p>
+        
+      </div>
+      
+  </section>
+  
+  <section class="tools-section">
+    <h2><i class="fas fa-tools"></i> Technologies We Use</h2>
+    <div class="tools-icons">
+      <i class="fab fa-html5" title="HTML5"></i>
+      <i class="fab fa-css3-alt" title="CSS3"></i>
+      <i class="fab fa-js" title="JavaScript"></i>
+      <i class="fab fa-react" title="React.js"></i>
+      <i class="fab fa-vuejs" title="Vue.js"></i>
+      <i class="fab fa-node" title="Node.js"></i>
+    </div>
+  </section>
+  
+  <section class="benefits-section">
+    <h2><i class="fas fa-thumbs-up"></i> Why Choose Us?</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci commodi eligendi quidem quibusdam cumque molestias iste eaque alias nostrum, nihil obcaecati, dolores facilis fugiat veniam, odit non dolorem nulla.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat magnam totam, deserunt facere iure quos accusantium ullam fuga, explicabo qui, iste iusto ab dolorum? Quibusdam, nihil. Cumque temporibus quam dolore.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quaerat hic voluptatum, totam magni rem blanditiis iste ipsa, assumenda quidem sit corrupti placeat! Culpa, alias sapiente! Explicabo eligendi laboriosam quo!
+    </p>
+    <ul class="benefits-list">
+      <li><i class="fas fa-check-circle"></i> Custom-tailored solutions for your business needs</li>
+      <li><i class="fas fa-clock"></i> On-time delivery with agile practices</li>
+      <li><i class="fas fa-users"></i> Collaborative communication & feedback</li>
+      <li><i class="fas fa-shield-alt"></i> Secure and scalable web architecture</li>
+    </ul>
+  </section>
+  
+  <section class="testimonial-section">
+    <h2><i class="fas fa-comment-dots"></i> Client Testimonials</h2>
+    <div class="testimonial">
+      <p>“Their web team is top-notch! Our website is stunning and performs like a dream.”</p>
+      <span>- Jane D., E-commerce CEO</span>
+    </div>
+    <div class="testimonial">
+      <p>“The responsive design helped us increase mobile users’ time on site significantly.”</p>
+      <span>- Mark S., Marketing Director</span>
+    </div>
+  </section>
+
+  <section class="service-gallery">
+    <h2><i class="fas fa-images"></i> Service Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/service1.jpg" alt="Project 1"></div>
+      <div class="gallery-item"><img src="images/service2.jpg" alt="Project 2"></div>
+      <div class="gallery-item"><img src="images/service3.jpg" alt="Project 3"></div>
+      <div class="gallery-item"><img src="images/service4.jpg" alt="Project 4"></div>
+      <div class="gallery-item"><img src="images/service5.jpg" alt="Project 5"></div>
+      
+    </div>
+  </section>
+  
+  
+  <section class="cta-section">
+    <h2>Let’s Build Something Great Together</h2>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+  </section>
+  
+
+  <section class="cta-section">
+    <h2>Ready to Build Your Website?</h2>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
+  </section>
+
+
+  <footer class="footer-wrapper">
+    <div class="footer-cover">
+        <div class="email-information">
+            <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+        </div>
+        <div class="all-information-cover">
+            <div class="first-line-of-information-cover">
+                <div class="top-category">
+                    <h6>Top Category</h6>
+                    <div class="top-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Spa and facial</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li> 
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>
+                            </ul>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="trending-category">
+                    <h6>Trending Category</h6>
+                    <div class="trending-category-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Hospitals</a></li>
+                                <li><a href="#">Restuarants</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Electricals</a></li>
+                                <li><a href="#">Automobiles</a></li>
+                                <li><a href="#">Transportation</a></li>                  
+                            </ul>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="help-support">
+                    <h6>Help & Support</h6>
+                    <div class="help-support-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                            </ul>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+            <div class="second-line-of-information-cover">
+                <div class="popular-tags">
+                    <h6>popular tags</h6>
+                    <div class="popular-tags-list">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                                <li><a href="#">Real estate in Chennai</a></li>
+                                <li><a href="#">Flat for rent in Melborn</a></li>
+                                <li><a href="#">Real Estate in Illunious</a></li>
+                                <li><a href="#">Enents in Thailand</a></li>
+                                <li><a href="#">Schools in new york</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact-details-cover">
+            <div class="contact-information">
+                <h6>Get in touch</h6>
+                <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+                <p>Phone: +01 5426 24400</p>
+                <p>Email: rn34@gmail.com</p>
+            </div>
+            <div class="download-information">
+                <h6>Download our free Mobile Apps</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                    </ul>
+            </div>           
+            <div class="social-media-details">
+                <h6>social media</h6>
+                    <ul>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                        <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                    </ul>
+            </div>                                                           
+        </div>
+  
+        <div class="countries">
+            <ul>
+                <li>Australia</li>
+                <li>UK</li>
+                <li>India</li>
+                <li>Germany</li>
+                <li>China</li>
+                <li>France</li>
+            </ul>
+            
+        </div>
+        <div class="footer-last">
+            <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+        </div>
+        
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script >
+    window.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.info-text li');
+
+  sections.forEach((el, i) => {
+    setTimeout(() => {
+      el.style.opacity = 1;
+      el.style.transform = 'translateX(0)';
+    }, i * 150);
+  });
+});
+
+  </script>
+</body>
+</html>

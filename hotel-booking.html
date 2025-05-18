@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking-Hotel</title>
+  <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="style-home-footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.primary-btn {
+  padding: 15px 40px;
+  background: blue;
+  font-weight: bold;
+  color: white;
+}
+
+.secondary-btn {
+  padding: 15px 40px;
+  background: none;
+  border: 2px solid white;
+  font-weight: bold;
+  color: white;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+
+
+/*--------header---------*/
+/*--------home---------*/
+.home {
+  height: 100vh;
+  color: #fff;
+}
+
+.home img {
+  width: 100%;
+  height: 100vh;
+}
+
+.home .text {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+}
+
+.home .text h1 {
+  font-size: 80px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.home p {
+  margin: 20px 0;
+}
+
+.home button {
+  margin-right: 20px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #fff;
+}
+
+.owl-nav .owl-prev {
+  left: 0;
+}
+
+.owl-nav .owl-next {
+  right: 0;
+}
+
+/*--------home---------*/
+/*--------book---------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.book {
+  padding: 40px 0;
+  background: #282834;
+  color: #fff;
+}
+
+h1 {
+  font-family: serif;
+}
+
+.book h1 {
+  font-size: 28px;
+}
+
+.book h1 span {
+  color: #7fc142;
+}
+
+.book input {
+  padding: 20px;
+}
+
+.book input:nth-last-child(1) {
+  background: #7fc142;
+  color: #fff;
+}
+
+/*--------book---------*/
+
+
+/*--------rooms---------*/
+.rooms {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.rooms .text {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  padding: 30px;
+}
+
+.rooms i {
+  font-size: 12px;
+  color: #fbb234;
+  margin: 15px 0;
+  margin-right: 5px;
+}
+
+.rooms p {
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+.rooms h3 {
+  font-size: 30px;
+  line-height: 20px;
+  margin-left: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.rooms h3 span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+}
+
+.owl-carousel1 .owl-nav .owl-prev,
+.owl-carousel1 .owl-nav .owl-next {
+  position: absolute;
+  top: -20%;
+  height: 50px;
+  width: 50px;
+  background: #0071c2 !important;
+}
+
+.owl-carousel1 .owl-nav .owl-prev i,
+.owl-carousel1 .owl-nav .owl-next i {
+  color: #fff;
+}
+
+.owl-carousel1 .owl-nav .owl-prev {
+  left: 90%;
+}
+
+.owl-carousel1 .owl-nav .owl-next {
+  right: 0;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 991px) {
+  .rooms h3 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .rooms h3 span {
+    font-size: 14px;
+  }
+
+  .rooms p {
+    font-size: 14px;
+  }
+
+  .rooms .text {
+    padding: 20px;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .rooms h3 {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  .rooms .text {
+    padding: 15px;
+  }
+
+}
+
+
+
+/*--------rooms---------*/
+/*--------gallery---------*/
+.gallery {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .img {
+  position: relative;
+}
+
+.gallery .img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: blanchedalmond;
+  width: 255px;
+  height: 251px;
+  z-index: 2;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.gallery span {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.overlay h3 {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.gallery .items:hover .overlay,
+.gallery .items:hover .img::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.gallery .owl-nav .owl-prev {
+  left: 85%;
+}
+
+.gallery .owl-nav .owl-next {
+  right: 5%;
+}
+
+.gallery .owl-nav .owl-next,
+.gallery .owl-nav .owl-prev {
+  top: -40%;
+}
+
+/* Responsive for tablets and below */
+@media (max-width: 768px) {
+  .gallery .img::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+
+  .gallery span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .overlay h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .overlay {
+    top: 25%;
+    font-size: 12px;
+  }
+
+  .overlay h3 {
+    font-size: 14px;
+  }
+
+  .gallery span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+
+
+}
+
+
+/*--------gallery---------*/
+/*--------services---------*/
+.services {
+  position: relative;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+.services .left {
+  padding: 30px 0;
+}
+
+.services .box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.services .box .text {
+  padding: 30px 0;
+  border: 1px dashed #fff;
+}
+
+.services i {
+  font-size: 50px;
+  color:blue;
+  transition: 0.5s;
+}
+
+.services h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20p;
+  transition: 0.5s;
+}
+
+.services img {
+  width: 100%;
+  height: 100%;
+}
+
+.services .box:hover {
+  background: #062b5c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.services .box:hover i,
+.services .box:hover h3 {
+  color: #fff;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .grid2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .services .box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .services .box {
+    padding: 10px;
+  }
+
+  .services i {
+    font-size: 40px;
+  }
+
+  .services h3 {
+    font-size: 18px;
+  }
+}
+
+
+/*--------services---------*/
+
+/*----------book hotel----------*/
+.rooms-section {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .rooms-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .rooms-section p {
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .slider {
+    position: relative;
+  }
+  
+  .rooms-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .room-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .room-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .room-card img {
+    max-width: 100%;
+    height: 50%;
+    
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .room-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .stars {
+    color: gold;
+    margin-bottom: 15px;
+  }
+  
+  .room-card p {
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .price-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-btn {
+    background: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-btn:hover {
+    background:  #0071c2;
+    color: black;
+    
+  }
+  
+  .rooms-section button.prev,
+  .rooms-section button.next {
+    background:  black;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  button.prev { left: -30px; }
+  button.next { right: -30px; }
+
+/***************/
+  .rooms-section button.prev1,
+  .rooms-section button.next1 {
+    background:  #0071c2 ;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  button.prev1 { left: -30px; }
+  button.next1 { right: -30px; }
+
+  
+ 
+
+  
+.image-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: 200px;
+    display: none;
+  }
+  
+  .image-slider img.active {
+    display: block;
+  }
+  
+  .image-slider .prev,
+  .image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .image-slider .prev {
+    left: 10px;
+  }
+  
+  .image-slider .next {
+    right: 10px;
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-bg{
+    background-color: lightseagreen;
+}
+.custom-bg:hover{
+    background-color: #253e5fde;
+}
+.availability-form{
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+  .room-card {
+    min-width: 280px;
+  }
+
+  .rooms-section h2 {
+    font-size: 30px;
+  }
+
+  .rooms-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rooms-container {
+    gap: 15px;
+  }
+
+  .room-card {
+    min-width: 250px;
+    min-height: 450px;
+    padding: 15px;
+  }
+
+  .book-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .rooms-section button.prev1,
+  .rooms-section button.next1 {
+    padding: 10px;
+    top: 45%;
+  }
+
+  button.prev1 { left: -15px; }
+  button.next1 { right: -15px; }
+
+  .image-slider img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-section {
+    padding: 30px 20px;
+  }
+
+  .room-card {
+    min-width: 220px;
+    min-height: 420px;
+  }
+
+  .rooms-section h2 {
+    font-size: 26px;
+  }
+
+  .rooms-section p {
+    font-size: 15px;
+  }
+
+  .book-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .image-slider img {
+    height: 160px;
+  }
+
+  .slider button.prev1,
+  .slider button.next1 {
+    top: 50%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .room-card {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  .rooms-container {
+    flex-direction: column;
+    gap: 30px;
+    overflow: visible;
+  }
+
+  .slider {
+    position: static;
+  }
+
+  .slider button.prev1,
+  .slider button.next1 {
+    display: none;
+  }
+
+  .image-slider img {
+    height: 140px;
+  }
+
+  .image-slider .prev,
+  .image-slider .next {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+/****************************hotel************************************/
+.hotel-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+.hotel-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hotel-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+.hotel-buttons {
+  margin: 20px 0;
+}
+
+.hotel-buttons button {
+  padding: 10px 20px;
+  border: 1px solid #0071c2;
+  background: #fff;
+  color: #0071c2;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.hotel-buttons .tab-button active  {
+  background: #0071c2;
+  color: #fff;
+}
+
+.hotel-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hotel-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hotel-info {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.hotel-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.hotel-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.hotel-price {
+  text-align: right;
+}
+
+.hotel-price p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.hotel-price strong {
+  font-size: 16px;
+  color: #000;
+}
+.rating {
+  display: inline-block;
+  background: #003580;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+}
+   
+   
+   
+   
+   
+   /* Tabs logic */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: grid;
+}
+
+/* Buttons update */
+.hotel-buttons .tab-button {
+  padding: 10px 20px;
+  border: 1px solid #0071c2;
+  background: #fff;
+  color: #0071c2;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hotel-buttons .tab-button.active {
+  background: #0071c2;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .hotel-info, .hotel-price {
+    text-align: left;
+  }
+
+  .hotel-price {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-buttons button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+
+
+/*************************************/
+.our {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.container-our {
+  display: flex;
+  gap: 20px;
+}
+
+.filters-our {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.filters-our label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hotel-section-our {
+  flex: 1;
+}
+
+.tabs-our {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs-our button {
+  padding: 10px 15px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabs-our .active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.hotel-card {
+  display: flex;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.hotel-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+.hotel-info h2 {
+  margin: 0 0 5px;
+}
+
+.location {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background: #e0e0e0;
+  padding: 5px 8px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.description {
+  margin-top: 10px;
+  color: #333;
+}
+
+.price-box {
+  text-align: right;
+  min-width: 150px;
+}
+
+.price-box .rating {
+  display: inline-block;
+  border: 2px solid #4285f4;
+  color: #4285f4;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+
+.price-box .price {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-box button {
+  background: #4285f4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.see-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.see-more-btn {
+  background-color: #4285f4;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #3367d6;
+}
+
+@media (max-width: 992px) {
+  .container-our {
+    flex-direction: column;
+  }
+
+  .filters-our {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hotel-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .price-box {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .tabs-our {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabs-our button {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tabs-our button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .see-more-btn {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+</style>
+
+<body>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+<!------------------------------banner section------------------------------------------------->
+<div class="container-fluid">
+  <div class="swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/hotel1.png" class="w-100 d-block" >
+        </div>
+        <div class="swiper-slide">
+          <img src="images/hotel2.png" class="w-100 d-block" >
+        </div>
+        <div class="swiper-slide">
+          <img src="images/hotel3.png" class="w-100 d-block" >
+        </div>
+        <div class="swiper-slide">
+          <img src="images/hotel4.png" class="w-100 d-block" >
+        </div>
+        <div class="swiper-slide">
+          <img src="images/hotel5.png" class="w-100 d-block" >
+        </div>
+      </div>
+      
+    </div>
+   
+</div>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3 seconds per slide
+      disableOnInteraction: false, // Keeps autoplay even after user interaction
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+</script>
+
+
+<header class="header">
+  <div class="menu-icon-wrapper">
+      <i class='bx bx-menu' id="menu-icon"></i>
+  </div>
+  
+  <div class="logo-and-explore-wrapper">
+      <div class="logo">
+          <p>CREATE</p>
+      </div>
+     
+      
+  </div>
+  
+  <div class="navbar1 text-nowrap">
+      <ul class="list-links1">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="jobs.html">Jobs</a></li>
+              <li><a href="products.html">Product</a></li>
+              <li><a href="events.html">Event</a></li>
+              <li><a href="advertise.html">Advertise</a></li>
+              <li><a href="services.html">Service</a></li>
+              <li><a href="contact.html">Contact Us</a></li>      
+      </ul>
+      <a href="#" class="btn">Add Business</a>
+      <a href="booking-home.html" class="btn">Booking</a>
+  </div>
+
+
+  <div class="menu-box">
+      <div class="close-icon">
+          <i class="fa-solid fa-xmark"></i>
+      </div>           
+      <div class="menu-box-wrapper">
+          <div class="navbar-and-explore-box">
+              <div class="navbar-wrapper1">
+                  <div class="navbar-list-menu-wrapper1">
+                      <div class="navbar-wrapper1-header">
+                          <h5>Menu</h5>                                 
+                      </div>
+                      <ul class="list-links">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="blog.html">Blogs</a></li>
+                          <li><a href="jobs.html">jobs</a></li>
+                          <li><a href="products.html">Product</a></li>
+                          <li><a href="events.html">Event</a></li>
+                          <li><a href="services.html">Service</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="create-blog-post.html">Create blog post</a></li>
+                          <li><a href="advertise.html">Advertise</a></li>
+                          <li><a href="job-deatails.html">job Details</a></li>                          
+                          <li><a href="#">Sign in</a></li>
+                          <li><a href="#">Sign out</a></li>
+                          <li><a href="#">Create Account</a></li>
+                          <li><button><a href="#">Add Business</a></button></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- <div class="navbar-wrapper2">
+                  <div class="navbar-list-menu-wrapper2">
+                      <ul class="list2-links">
+                          <li><a href="#">All Services</a></li>
+                          <li><a href="#">Classified ADs</a></li>
+                          <li><a href="#">Service Experts</a></li>
+                          <li><a href="#">Jobs</a></li>
+                          <li><a href="#">Explore Travels</a></li>
+                          <li><a href="#">News & Magazines</a></li>
+                          <li><a href="#">Events</a></li>
+                          <li><a href="#">Products</a></li>
+                          <li><a href="#">Blogs</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="explore-box">
+                  <div class="explore-list-menu-wrapper">
+                      <div class="explore-list-header">
+                          <h5>All Categories</h5>                                 
+                      </div>
+                      <ul class="explore-menu-list">
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Real Estate</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Resturants</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Electricals</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Technology</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Education</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Transportation</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Sports</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Pet Shop</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Automobiles</a></li>
+                          <li class="explore-menu-list-item"><i id="icon" class="fa-solid fa-chevron-right "></i><a href="#">Hospitals</a></li>
+                      </ul>
+                  </div>
+                  
+                  
+              </div> -->
+               
+              
+          </div>
+      </div>
+  </div>
+</header>
+
+
+
+<!---------------------------check form------------------------>
+<div class="container availability-form">
+  <div class="row">
+      <div class="col-lg-12 bg-white shadow p-4 rounded">
+          <h5 class="mb-4">Check Booking Availabillity</h5>
+          <form>
+              <div class="row align-items-end">
+                  <div class="col-lg-3 mb-3">
+                      <label class="form-label" style="font-weight: 500;">Check-in</label>
+                      <input type="date" class="form-control shadow-none">
+                  </div>
+                  <div class="col-lg-3 mb-3">
+                      <label class="form-label" style="font-weight: 500;">Check-out</label>
+                      <input type="date" class="form-control shadow-none">
+                  </div>
+                  <div class="col-lg-3 mb-3">
+                      <label class="form-label" style="font-weight: 500;">Adult</label>
+                      <select class="form-select shadow-none">
+                          
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                  </div>
+
+                  <div class="col-lg-2 mb-3">
+                      <label class="form-label" style="font-weight: 500;">Children</label>
+                      <select class="form-select shadow-none">
+                          
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                  </div>
+
+                  <div class="col-lg-1 mb-lg-3 mt-2">
+                      <button type="submit" class="btn text-white  shadow-none custom-bg">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+<!-----------------------------------------------hotel section------------------>
+<section class="hotel-section">
+  <div class="hotel-header">
+    <h2>Last-minute hotels near you</h2>
+    <p>Lorem ipsum dolor sit amet magnam repellat rem voluptatem .</p>
+    <div class="hotel-buttons">
+      <button class="tab-button active" data-tab="tonight">Hotels for tonight</button>
+      <button class="tab-button" data-tab="weekend">Hotels for this weekend</button>
+    </div>
+  </div>
+
+  <!-- Hotels for Tonight -->
+  <div class="hotel-grid tab-content active" id="tonight">
+  <div class="hotel-grid">
+  
+    <!-- Add your existing 6 hotel cards here -->
+    <!-- Example Card -->
+    <div class="hotel-card" >
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <a href="book-now.html"><h3>Hotel</h3></a>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <h3>Hotel</h3>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <h3>Hotel</h3>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <h3>Hotel</h3>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <h3>Hotel</h3>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/room1.png" alt="Cafe Aroma Inn">
+      <div class="hotel-info">
+        <h3>Hotel</h3>
+        <p>City Centre</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.8</span>
+        <p>From <strong>LKR 13,521.57</strong><br><small>For tonight</small></p>
+      </div>
+    </div>
+    <!-- Add the remaining cards... -->
+  </div>
+  </div>
+
+  <!-- Hotels for This Weekend -->
+  <div class="hotel-grid tab-content" id="weekend">
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Amaya Hills Kandy">
+      <div class="hotel-info">
+        <h3>Amaya Hills Kandy</h3>
+        <p>Peradeniya</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">8.5</span>
+        <p>From <strong>LKR 24,300.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Earl's Regent Hotel">
+      <div class="hotel-info">
+        <h3>Earl's Regent Hotel</h3>
+        <p>Peradeniya Road</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">8.3</span>
+        <p>From <strong>LKR 19,950.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Mahaweli Reach Hotel">
+      <div class="hotel-info">
+        <h3>Mahaweli Reach Hotel</h3>
+        <p>Centre Point</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">8.0</span>
+        <p>From <strong>LKR 31,000.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Mahaweli Reach Hotel">
+      <div class="hotel-info">
+        <h3>Mahaweli Reach Hotel</h3>
+        <p>Centre Point</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">8.0</span>
+        <p>From <strong>LKR 31,000.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Mahaweli Reach Hotel">
+      <div class="hotel-info">
+        <h3>Mahaweli Reach Hotel</h3>
+        <p>Centre Point</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">8.0</span>
+        <p>From <strong>LKR 31,000.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="images/hotel2.png" alt="Kandy City Hotel">
+      <div class="hotel-info">
+        <h3>Kandy City Hotel</h3>
+        <p>Centre Point</p>
+      </div>
+      <div class="hotel-price">
+        <span class="rating">7.7</span>
+        <p>From <strong>LKR 11,500.00</strong><br><small>This weekend</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+button.addEventListener('click', () => {
+  // Remove active from all buttons and content
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  tabContents.forEach(content => content.classList.remove('active'));
+
+  // Add active to clicked button and corresponding content
+  button.classList.add('active');
+  document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+});
+});
+
+</script>
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------->
+<section class="our">
+  <h1>Hotels</h1>
+  
+  <div class="container-our">
+    <aside class="filters-our">
+      <h3>Star rating</h3>
+      <label><input type="checkbox"> 5 stars</label>
+      <label><input type="checkbox"> 4 stars</label>
+      <label><input type="checkbox"> 3 stars</label>
+      <label><input type="checkbox"> 2 stars</label>
+      <label><input type="checkbox"> 1 star</label>
+      
+      <h3>Review score</h3>
+      <label><input type="checkbox"> Exceptional 9+</label>
+      <label><input type="checkbox"> Very good 8+</label>
+      <label><input type="checkbox"> Good 7+</label>
+      <label><input type="checkbox"> Pleasant 6+</label>
+    </aside>
+
+    <main class="hotel-section-our">
+      <div class="tabs-our">
+        <button class="tab-btn active1" data-tab="top-picks">Our top picks</button>
+        <button class="tab-btn" data-tab="lowest-price">Lowest price first</button>
+        <button class="tab-btn" data-tab="nearest">Nearest to</button>
+        <button class="tab-btn" data-tab="best-reviewed">Best reviewed</button>
+      </div>
+      
+      <!-- Hotel Cards - Top Picks -->
+      <div class="tab-content active" data-content="top-picks">
+        <!-- hotel-card elements here -->
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Hotel Beach">
+          <div class="hotel-info">
+            <h2>Mount Lavinia Hotel</h2>
+            <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Private beach</span>
+              <span>Free Wi-Fi</span>
+              <span>Swimming pool</span>
+              <span>+5</span>
+            </div>
+            <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+          </div>
+          <div class="price-box">
+            <p>Excellent<br><small>2088 reviews</small></p>
+            <span class="rating">8.0</span>
+            <p class="price">USD 75</p>
+            <button>book now</button>
+          </div>
+        </div>
+      
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Hotel Beach">
+          <div class="hotel-info">
+            <h2>Mount Lavinia Hotel</h2>
+            <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Private beach</span>
+              <span>Free Wi-Fi</span>
+              <span>Swimming pool</span>
+              <span>+5</span>
+            </div>
+            <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+          </div>
+          <div class="price-box">
+            <p>Excellent<br><small>2088 reviews</small></p>
+            <span class="rating">8.0</span>
+            <p class="price">USD 75</p>
+            <button>book now</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Hotel Beach">
+          <div class="hotel-info">
+            <h2>Mount Lavinia Hotel</h2>
+            <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Private beach</span>
+              <span>Free Wi-Fi</span>
+              <span>Swimming pool</span>
+              <span>+5</span>
+            </div>
+            <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+          </div>
+          <div class="price-box">
+            <p>Excellent<br><small>2088 reviews</small></p>
+            <span class="rating">8.0</span>
+            <p class="price">USD 75</p>
+            <button>book now</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Hotel Beach">
+          <div class="hotel-info">
+            <h2>Mount Lavinia Hotel</h2>
+            <p class="location">📍 Mount Lavinia Beach, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Private beach</span>
+              <span>Free Wi-Fi</span>
+              <span>Swimming pool</span>
+              <span>+5</span>
+            </div>
+            <p class="description">"This hotel has such a lovely feel. Stayed in direct ocean view room and had excellent view of the beach in front."</p>
+          </div>
+          <div class="price-box">
+            <p>Excellent<br><small>2088 reviews</small></p>
+            <span class="rating">8.0</span>
+            <p class="price">USD 75</p>
+            <button>book now</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hotel Cards - Lowest Price -->
+      <div class="tab-content" data-content="lowest-price">
+        <!-- hotel-card elements here -->
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Budget Hotel">
+          <div class="hotel-info">
+            <h2>Colombo Budget Inn</h2>
+            <p class="location">📍 Maradana, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Free Wi-Fi</span>
+              <span>AC Room</span>
+            </div>
+            <p class="description">"Clean and affordable stay for backpackers."</p>
+          </div>
+          <div class="price-box">
+            <p>Very Good<br><small>560 reviews</small></p>
+            <span class="rating">7.6</span>
+            <p class="price">USD 30</p>
+            <button>book now</button>
+          </div>
+        </div>
+      
+        <div class="hotel-card">
+          <img src="images/hotel3.png" alt="Budget Hotel">
+          <div class="hotel-info">
+            <h2>Colombo Budget Inn</h2>
+            <p class="location">📍 Maradana, Colombo - <a href="#">View on map</a></p>
+            <div class="tags">
+              <span>Free Wi-Fi</span>
+              <span>AC Room</span>
+            </div>
+            <p class="description">"Clean and affordable stay for backpackers."</p>
+          </div>
+          <div class="price-box">
+            <p>Very Good<br><small>560 reviews</small></p>
+            <span class="rating">7.6</span>
+            <p class="price">USD 30</p>
+            <button>book now</button>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Hotel Cards - Nearest -->
+      <div class="tab-content" data-content="nearest">
+        <!-- hotel-card elements here -->
+      </div>
+      
+      <!-- Hotel Cards - Best Reviewed -->
+      <div class="tab-content" data-content="best-reviewed">
+        <!-- hotel-card elements here -->
+      </div>
+      <div class="see-more-container">
+        <button class="see-more-btn">See More</button>
+      </div>
+      </div>
+      
+    </main>
+  </div>
+</section>
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove "active" class from all buttons and contents
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.remove("active"));
+
+        // Add "active" class to clicked button
+        button.classList.add("active");
+
+        // Get tab name and activate corresponding content
+        const tabName = button.getAttribute("data-tab");
+        const targetContent = document.querySelector(`.tab-content[data-content="${tabName}"]`);
+        if (targetContent) {
+          targetContent.classList.add("active");
+        }
+      });
+    });
+  });
+
+
+
+document.querySelector(".see-more-btn").addEventListener("click", () => {
+  alert("Load more hotels functionality coming soon!");
+  // You could dynamically insert more hotel cards here
+  
+});
+
+
+</script>
+
+
+
+
+
+<!----------------------------------------------room section---------------------------------------->
+  <section class="rooms">
+    <div class="container top">
+      <div class="heading">
+        
+        <h2>Popular Hotels</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        </p>
+      </div>
+
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 1</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 2</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 3</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 4</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 4</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 5</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 6</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Hotel 7</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+              <div class="button flex">
+                <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 40,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+
+<!---------------------------------------gallary section-------------------------------------------->
+  <section class="gallery">
+    <div class="container top">
+      <div class="heading">
+        
+        <h2>Our Gallery</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      </div>
+    </div>
+
+    <div class="content mtop">
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-1.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Book Now</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-6.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-3.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-4.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-5.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-6.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-4.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-3.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-1.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-6.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Add more.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+<!-------------------------------------------service section----------------------------------------------
+  <section class="services top">
+    <div class="container">
+      <div class="heading">
+       
+        <h2>Our Services</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      </div>
+
+
+      <div class="content flex_space">
+        <div class="left grid2">
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delious Food</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-person-biking"></i>
+              <h3>Fintness</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-spa"></i>
+              <h3>Beauty Spa</h3>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delious Food</h3>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delious Food</h3>
+            </div>
+          </div>
+        </div>
+        
+    
+      </div>
+    </div>
+  </section>--------->
+
+
+
+<!----------------------------book hotel section------------------------------------------------------------>
+<section class="rooms-section">
+    
+  <h2>Book Our Hotels</h2>
+  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+  
+
+  <div class="slider">
+      <button class="prev1">&#10094;</button>
+    
+
+    <div class="rooms-container">
+      <div class="room-card">
+          <div class="image-slider">
+              <img src="images/hotel3.png" alt="Room Image" class="slide active">
+              <img src="images/hotel4.png" alt="Room Image" class="slide">
+              <img src="images/hotel5.png" alt="Room Image" class="slide">
+          
+              <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+              <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+        <h3>Hotel Name</h3>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmod tempor incid.</p>
+        <div class="price-book">
+          <button class="book-btn">Book Now</button>
+          <span>$250 <small>Per Night</small></span>
+        </div>
+      </div>
+
+      <div class="room-card">
+          <div class="image-slider">
+              <img src="images/hotel3.png" alt="Room Image" class="slide active">
+              <img src="images/hotel4.png" alt="Room Image" class="slide">
+              <img src="images/hotel5.png" alt="Room Image" class="slide">
+          
+              <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+              <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+        <h3>Hotel Name</h3>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmod tempor incid.</p>
+        <div class="price-book">
+          <button class="book-btn">Book Now</button>
+          <span>$250 <small>Per Night</small></span>
+        </div>
+      </div>
+
+      <div class="room-card">
+          <div class="image-slider">
+              <img src="images/hotel3.png" alt="Room Image" class="slide active">
+              <img src="images/hotel4.png" alt="Room Image" class="slide">
+              <img src="images/hotel5.png" alt="Room Image" class="slide">
+          
+              <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+              <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+        <h3>Hotel Name</h3>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmod tempor incid.</p>
+        <div class="price-book">
+          <button class="book-btn">Book Now</button>
+          <span>$250 <small>Per Night</small></span>
+        </div>
+      </div>
+
+      <div class="room-card">
+          <div class="image-slider">
+              <img src="images/hotel3.png" alt="Room Image" class="slide active">
+              <img src="images/hotel4.png" alt="Room Image" class="slide">
+              <img src="images/hotel5.png" alt="Room Image" class="slide">
+          
+              <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+              <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+          <h3>Hotel Name</h3>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmod tempor incid.</p>
+          <div class="price-book">
+            <button class="book-btn">Book Now</button>
+            <span>$250 <small>Per Night</small></span>
+          </div>
+      </div>
+
+      <div class="room-card">
+        <div class="image-slider">
+            <img src="images/hotel3.png" alt="Room Image" class="slide active">
+            <img src="images/hotel4.png" alt="Room Image" class="slide">
+            <img src="images/hotel5.png" alt="Room Image" class="slide">
+        
+            <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+            <button class="next" onclick="nextSlide(this)">&#10095;</button>
+          </div>
+        <h3>Hotel Name</h3>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmod tempor incid.</p>
+        <div class="price-book">
+          <button class="book-btn">Book Now</button>
+          <span>$250 <small>Per Night</small></span>
+        </div>
+    </div>
+
+        
+    </div>
+
+
+
+    <button class="next1">&#10095;</button>
+  </div>
+</section>
+<script>
+  const slider = document.querySelector('.rooms-container');
+  const nextBtn = document.querySelector('.next1');
+  const prevBtn = document.querySelector('.prev1');
+
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({
+      left: 300, // scroll amount in pixels
+      behavior: 'smooth'
+    });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({
+      left: -300, // scroll amount in pixels
+      behavior: 'smooth'
+    });
+  });
+
+
+  // Scroll rooms-container left and right on next1/prev1 click
+  document.querySelector('.next1').addEventListener('click', () => {
+    document.querySelector('.rooms-container').scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  document.querySelector('.prev1').addEventListener('click', () => {
+    document.querySelector('.rooms-container').scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  // Image Slider inside each room-card
+  function nextSlide(button) {
+    const slides = button.parentElement.querySelectorAll('.slide');
+    const active = button.parentElement.querySelector('.slide.active');
+    let index = Array.from(slides).indexOf(active);
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  function prevSlide(button) {
+    const slides = button.parentElement.querySelectorAll('.slide');
+    const active = button.parentElement.querySelector('.slide.active');
+    let index = Array.from(slides).indexOf(active);
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+  }
+</script>
+
+<footer class="footer-wrapper">
+  <div class="footer-cover">
+      <div class="email-information">
+          <h5>Free support: +94 768594769 | Email: h34@gmail.com</h5>
+      </div>
+      <div class="all-information-cover">
+          <div class="first-line-of-information-cover">
+              <div class="top-category">
+                  <h6>Top Category</h6>
+                  <div class="top-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Technology</a></li>
+                              <li><a href="#">Spa and facial</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li> 
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>
+                          </ul>
+                      </div>
+                  </div>                  
+              </div>
+              <div class="trending-category">
+                  <h6>Trending Category</h6>
+                  <div class="trending-category-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Hospitals</a></li>
+                              <li><a href="#">Restuarants</a></li>
+                              <li><a href="#">Real Estate</a></li>
+                              <li><a href="#">Sports</a></li>
+                              <li><a href="#">Education</a></li>
+                              <li><a href="#">Electricals</a></li>
+                              <li><a href="#">Automobiles</a></li>
+                              <li><a href="#">Transportation</a></li>                  
+                          </ul>
+                      </div>
+                  </div>                   
+              </div>
+              <div class="help-support">
+                  <h6>Help & Support</h6>
+                  <div class="help-support-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Feedback</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                              <li><a href="#">Terms of use</a></li>
+                          </ul>
+                      </div>
+                  </div>                        
+              </div>
+          </div>
+          <div class="second-line-of-information-cover">
+              <div class="popular-tags">
+                  <h6>popular tags</h6>
+                  <div class="popular-tags-list">
+                      <div class="list">
+                          <ul>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                              <li><a href="#">Real estate in Chennai</a></li>
+                              <li><a href="#">Flat for rent in Melborn</a></li>
+                              <li><a href="#">Real Estate in Illunious</a></li>
+                              <li><a href="#">Enents in Thailand</a></li>
+                              <li><a href="#">Schools in new york</a></li>
+                          </ul>
+                      </div>
+                  </div>    
+              </div>
+          </div>
+          
+      </div>
+      <div class="contact-details-cover">
+          <div class="contact-information1">
+              <h6>Get in touch</h6>
+              <p>Address:288 Orchid lake Road, 180 Farmington Hills,USA</p>
+              <p>Phone: +01 5426 24400</p>
+              <p>Email: rn34@gmail.com</p>
+          </div>
+          <div class="download-information">
+              <h6>Download our free Mobile Apps</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/gstore.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/astore.png" alt=""></a></li>
+                  </ul>
+          </div>           
+          <div class="social-media-details">
+              <h6>social media</h6>
+                  <ul>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/1.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/2.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/3.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/4.png" alt=""></a></li>
+                      <li><a href="#"><img src="https://bizbookdirectorytemplate.com/images/social/5.png" alt=""></a></li>
+                  </ul>
+          </div>                                                           
+      </div>
+
+      <div class="countries">
+          <ul>
+              <li>Australia</li>
+              <li>UK</li>
+              <li>India</li>
+              <li>Germany</li>
+              <li>China</li>
+              <li>France</li>
+          </ul>
+          
+      </div>
+      <div class="footer-last">
+          <p>Copyright &copy; 2022  <a href="#">Rn53 Themes</a>. Proudly powered by <a href="#">Rn53Themes.net</a></p>
+      </div>
+      
+  </div>
+</footer>  
+
+
+  
+
+
+  
+
+ 
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="hotel-booking.js"></script>
+  
+</body>
+
+</html>
